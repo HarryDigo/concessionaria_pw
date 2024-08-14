@@ -1,0 +1,77 @@
+CREATE DATABASE bdlocadora_ds;
+
+USE bdlocadora_ds
+
+#tables
+
+CREATE TABLE clientes(
+    clienteCPF int(9) NOT NULL PRIMARY KEY,
+    clienteNome varchar(40) NOT NULL,
+    clienteEnde varchar(60) NOT NULL,
+    clienteTel varchar(15) NOT NULL,
+    clienteCidade varchar(60) NOT NULL,
+    clienteDataNasc date NOT NULL,
+    clienteCNH int(11) NOT NULL,
+    clienteCNHCat varchar(2) NOT NULL
+);
+
+CREATE TABLE funcionarios(
+    funcMatricula int(4) NOT NULL PRIMARY KEY,
+    funcNome varchar(40) NOT NULL,
+    funcDepto int(1) NOT NULL,
+    funcSalario decimal(8,2) NOT NULL,
+    funcAdmissao date NOT NULL,
+    funcFilho int(1) NOT NULL,
+    funcSexo varchar(1) NOT NULL,
+    funcAtivo tinyint(1) NOT NULL
+);
+
+CREATE TABLE veiculos(
+    veicPlaca char(7) NOT NULL PRIMARY KEY,
+    veicMarca varchar(15) NOT NULL,
+    veicModelo varchar(15) NOT NULL,
+    veicCor varchar(15) NULL,
+    veicAno int(4) NOT NULL,
+    veicComb char(1) NULL,
+    veicCat int(1) NULL,
+    veicStatusAlocado tinyint(1) NOT NULL
+);
+
+CREATE TABLE departamento(
+    deptoCod int(11) NOT NULL PRIMARY KEY,
+    deptoNome varchar(20) NOT NULL
+);
+
+CREATE TABLE categoria(
+    catCod int(11) NOT NULL PRIMARY KEY,
+    catNome varchar(20) NOT NULL,
+    catValorKm decimal(8, 2) NOT NULL
+);
+
+CREATE TABLE combustivel(
+    combTipo char(1) NOT NULL PRIMARY KEY,
+    combNome varchar(20) NULL
+);
+
+CREATE TABLE ordem_servico(
+    osNum int(11) NOT NULL PRIMARY KEY,
+    osFuncMat int(4) NOT NULL,
+    osClienteCPF int(9) NOT NULL,
+    osVeicPlaca char(7) NOT NULL,
+    osDataRetirada date NOT NULL,
+    osDataDevolucao date NULL,
+    osKmRetirada decimal(8, 2) NOT NULL,
+    osKmDevolucao decimal(8, 2) NOT NULL,
+    osStatus tinyint(1) NOT NULL,
+    osValorPgto decimal(10, 2) NULL
+);
+
+CREATE TABLE usuarios(
+    usuarioLogin int(11) NOT NULL PRIMARY KEY,
+    usuarioSenha varchar(8) NOT NULL,
+    usuarioFuncMat int(4) NULL,
+    usuarioSetor int(11) NOT NULL,
+    usuarioStatus tinyint(1) NULL
+);
+
+#foreign keys
