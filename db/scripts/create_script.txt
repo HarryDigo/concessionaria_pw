@@ -75,3 +75,24 @@ CREATE TABLE usuarios(
 );
 
 #foreign keys
+
+ALTER TABLE funcionarios
+    ADD FOREIGN KEY (funcDepto) REFERENCES departamento(deptoCod);
+
+ALTER TABLE veiculos
+    ADD FOREIGN KEY (veicComb) REFERENCES combustivel(combTipo);
+
+ALTER TABLE veiculos
+    ADD FOREIGN KEY (veicCat) REFERENCES categoria(catCod);
+
+ALTER TABLE ordem_servico
+    ADD FOREIGN KEY (osVeicPlaca) REFERENCES veiculos(veicPlaca);
+
+ALTER TABLE ordem_servico
+    ADD FOREIGN KEY (osClienteCPF) REFERENCES clientes(clienteCPF);
+
+ALTER TABLE ordem_servico
+    ADD FOREIGN KEY (osFuncMat) REFERENCES funcionarios(funcMatricula);
+
+ALTER TABLE usuarios
+    ADD FOREIGN KEY (usuarioFuncMat) REFERENCES funcionarios(funcMatricula);
