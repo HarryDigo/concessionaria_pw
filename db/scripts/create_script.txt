@@ -4,7 +4,7 @@ USE bdlocadora_ds
 
 #tables
 
-CREATE TABLE clientes(
+CREATE TABLE Clientes(
     clienteCPF int(9) NOT NULL PRIMARY KEY,
     clienteNome varchar(40) NOT NULL,
     clienteEnde varchar(60) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE clientes(
     clienteCNHCat varchar(2) NOT NULL
 );
 
-CREATE TABLE funcionarios(
+CREATE TABLE Funcionarios(
     funcMatricula int(4) NOT NULL PRIMARY KEY,
     funcNome varchar(40) NOT NULL,
     funcDepto int(1) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE funcionarios(
     funcAtivo tinyint(1) NOT NULL
 );
 
-CREATE TABLE veiculos(
+CREATE TABLE Veiculos(
     veicPlaca char(7) NOT NULL PRIMARY KEY,
     veicMarca varchar(15) NOT NULL,
     veicModelo varchar(15) NOT NULL,
@@ -37,15 +37,15 @@ CREATE TABLE veiculos(
     veicStatusAlocado tinyint(1) NOT NULL
 );
 
-CREATE TABLE departamento(
+CREATE TABLE Departamento(
     deptoCod int(11) NOT NULL PRIMARY KEY,
     deptoNome varchar(20) NOT NULL
 );
 
-CREATE TABLE categoria(
+CREATE TABLE Categoria(
     catCod int(11) NOT NULL PRIMARY KEY,
     catNome varchar(20) NOT NULL,
-    catValorKm decimal(8, 2) NOT NULL
+    catValor_km decimal(8, 2) NOT NULL
 );
 
 CREATE TABLE combustivel(
