@@ -1,3 +1,34 @@
+INSERT INTO clientes (clienteCPF, clienteNome, clienteEnde, clienteTel, clienteCidade, clienteDataNasc, clienteCNH, clienteCNHCat) VALUES
+    ('123456789', 'João Silva', 'Rua das Flores, 123', '(11) 98765-4321', 'São Paulo', '1985-04-12', '12345678900', 'B')
+    ('987654321', 'Maria Oliveira', 'Avenida Paulista, 456', '(11) 91234-5678', 'São Paulo', '1990-08-22', '98765432101', 'A')
+    ('111222333', 'Pedro Santos', 'Rua da Praia, 789', '(21) 98765-1234', 'Rio de Janeiro', '1978-11-30', '11122233344', 'AB')
+    ('444555666', 'Ana Costa', 'Rua dos Jacarandás, 101', '(31) 92345-6789', 'Belo Horizonte', '1982-05-16', '44455566677', 'B')
+    ('777888999', 'Carlos Pereira', 'Rua das Acácias, 202', '(61) 98765-4321', 'Brasí­lia', '1995-07-25', '77788899900', 'C')
+    ('222333444', 'Laura Mendes', 'Avenida Brasil, 303', '(41) 91234-5678', 'Curitiba', '1988-12-10', '22233344411', 'B')
+    ('555666777', 'Lucas Almeida', 'Rua das Palmeiras, 404', '(21) 99876-5432', 'Rio de Janeiro', '1993-03-05', '55566677722', 'A')
+    ('888999000', 'Fernanda Lima', 'Rua das Orquí­deas, 505', '(71) 98765-6789', 'Salvador', '1987-09-17', '88899900033', 'AB')
+    ('333444555', 'Gustavo Rocha', 'Avenida Sete, 606', '(11) 93456-7890', 'São Paulo', '1980-01-20', '33344455544', 'C')
+    ('666777888', 'Juliana Campos', 'Rua dos Girassóis, 707', '(31) 91567-8901', 'Belo Horizonte', '1991-06-12', '66677788855', 'B')
+
+INSERT INTO veiculos (veicPlaca, veicMarca, veicModelo, veicCor, veicAno, veicComb, veicCat, veicStatusAlocado) VALUES
+    ('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 1),
+    ('ACZ3243', 'VW', 'Fusca', 'Rosa', 1956, 'G', 4, 1),
+    ('ADE3456', 'Chevrolet', 'Camaro', 'Amarelo', 2022, 'G', 4, 1),
+    ('ADW2456', 'VW', 'Gol', 'Vermelho', 2021, 'A', 1, 1),
+    ('ADX1473', 'Ford', 'Ka', 'Branco', 2021, 'A', 1, 1),
+    ('AQW1234', 'Ford', 'Fusion', 'Preto', 2022, 'F', 3, 1),
+    ('AQX3451', 'Porsche', 'Carrera', 'Preto', 2022, 'G', 4, 1),
+    ('AQY2005', 'Chevrolet', 'S10', 'Branco', 2022, 'D', 2, 1),
+    ('ASX3232', 'Ford', 'Ka', 'Marrom', 2022, 'F', 1, 1),
+    ('AVX4003', 'VW', 'Amarok', 'Preto', 2022, 'D', 2, 1),
+    ('AWQ3703', 'Chevrolet', 'Omega', 'Preto', 2022, 'G', 3, 1),
+    ('AWS2365', 'Chevrolet', 'Cruze', 'Azul', 2022, 'F', 3, 1),
+    ('AWV1234', 'Fiat', 'Palio', 'Branco', 2021, 'F', 1, 0),
+    ('AWV1323', 'VW', 'Gol', 'Branco', 2022, 'F', 1, 0),
+    ('AWY4546', 'Fiat', 'Fiorino', 'Branco', 2021, 'A', 2, 1),
+    ('AZX3273', 'VW', 'Fox', 'Azul', 2021, 'F', 1, 1);
+
+
 INSERT INTO veiculos (veicPlaca, veicMarca, veicModelo, veicCor, veicAno, veicComb, veicCat, veicStatusAlocado)VALUES
   ('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 1),
   ('ACZ3243', 'VW', 'Fusca', 'Rosa', 1956, 'G', 4, 1),
