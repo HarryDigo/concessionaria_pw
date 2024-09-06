@@ -29,6 +29,25 @@ INSERT INTO funcionarios(funcMatricula, funcNome, funcDepto, funcSalario, funcAd
     (1016, 'Wendell Navarro Perez', 3, '1212.00', '2004-04-15', 2, 'M', 1),
     (1017, 'Rodolfo Rodrigues', 1, '8500.00', '2022-09-10', 2, 'M', 1);
 
+INSERT INTO combustivel(combTipo, combNome)VALUES
+  ('A', 'Alcool'),
+  ('D', 'Diesel'),
+  ('F', 'Flex'),
+  ('G', 'Gasolina');
+
+INSERT INTO departamento(deptoCod, deptoNome)VALUES
+  (1, 'Atendimento'),
+  (2, 'Administrativo'),
+  (3, 'Financeiro'),
+  (4, 'Diretoria'),
+  (5, 'Copa');
+
+INSERT INTO categoria(catCod, catNome, catValor_km)VALUES
+  (1, 'Basico', 0.49),
+  (2, 'Utilitario', 0.51),
+  (3, 'Luxo', 0.53),
+  (4, 'Especial', 0.55);
+
 INSERT INTO veiculos (veicPlaca, veicMarca, veicModelo, veicCor, veicAno, veicComb, veicCat, veicStatusAlocado)VALUES
   ('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 1),
   ('ACZ3243', 'VW', 'Fusca', 'Rosa', 1956, 'G', 4, 1),
@@ -59,21 +78,4 @@ INSERT INTO ordem_servico(osNum, osFuncMat, osClienteCPF, osVeicPlaca, osDataRet
   ('20241110222', 1002, 222333444, 'ADX1473', '2024-06-30', '2024-07-25', '1400.00', '1500.00', '1', '590.00'),
   ('20240706043', 1011, 777888999, 'AQY2005', '2021-07-15', '2021-07-30', '1220.00', '1535.00', '1', '980.00');
 
-INSERT INTO combustivel(combTipo, combNome)VALUES
-  ('A', 'Alcool'),
-  ('D', 'Diesel'),
-  ('F', 'Flex'),
-  ('G', 'Gasolina');
 
-INSERT INTO departamento(deptoCod, deptoNome)VALUES
-  (1, 'Atendimento'),
-  (2, 'Administrativo'),
-  (3, 'Financeiro'),
-  (4, 'Diretoria'),
-  (5, 'Copa');
-
-INSERT INTO categoria(catCod, catNome, catValor_km)VALUES
-  (1, 'Basico', 0.49),
-  (2, 'Utilitario', 0.51),
-  (3, 'Luxo', 0.53),
-  (4, 'Especial', 0.55);
