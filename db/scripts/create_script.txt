@@ -99,6 +99,25 @@ ALTER TABLE usuarios
 
 #inserts
 
+INSERT INTO combustivel(combTipo, combNome)VALUES
+  ('A', 'Alcool'),
+  ('D', 'Diesel'),
+  ('F', 'Flex'),
+  ('G', 'Gasolina');
+
+INSERT INTO departamento(deptoCod, deptoNome)VALUES
+  (1, 'Atendimento'),
+  (2, 'Administrativo'),
+  (3, 'Financeiro'),
+  (4, 'Diretoria'),
+  (5, 'Copa');
+
+INSERT INTO categoria(catCod, catNome, catValor_km)VALUES
+  (1, 'Basico', 0.49),
+  (2, 'Utilitario', 0.51),
+  (3, 'Luxo', 0.53),
+  (4, 'Especial', 0.55);
+
 INSERT INTO clientes (clienteCPF, clienteNome, clienteEnde, clienteTel, clienteCidade, clienteDataNasc, clienteCNH, clienteCNHCat) VALUES
     ('123456789', 'João Silva', 'Rua das Flores, 123', '(11) 98765-4321', 'São Paulo', '1985-04-12', '12345678900', 'B'),
     ('987654321', 'Maria Oliveira', 'Avenida Paulista, 456', '(11) 91234-5678', 'São Paulo', '1990-08-22', '98765432101', 'A'),
@@ -129,25 +148,6 @@ INSERT INTO funcionarios(funcMatricula, funcNome, funcDepto, funcSalario, funcAd
     (1015, 'Josefina Sarmento', 4, '6789.00', '1997-01-02', 1, 'F', 1),
     (1016, 'Wendell Navarro Perez', 3, '1212.00', '2004-04-15', 2, 'M', 1),
     (1017, 'Rodolfo Rodrigues', 1, '8500.00', '2022-09-10', 2, 'M', 1);
-
-INSERT INTO combustivel(combTipo, combNome)VALUES
-  ('A', 'Alcool'),
-  ('D', 'Diesel'),
-  ('F', 'Flex'),
-  ('G', 'Gasolina');
-
-INSERT INTO departamento(deptoCod, deptoNome)VALUES
-  (1, 'Atendimento'),
-  (2, 'Administrativo'),
-  (3, 'Financeiro'),
-  (4, 'Diretoria'),
-  (5, 'Copa');
-
-INSERT INTO categoria(catCod, catNome, catValor_km)VALUES
-  (1, 'Basico', 0.49),
-  (2, 'Utilitario', 0.51),
-  (3, 'Luxo', 0.53),
-  (4, 'Especial', 0.55);
 
 INSERT INTO veiculos (veicPlaca, veicMarca, veicModelo, veicCor, veicAno, veicComb, veicCat, veicStatusAlocado)VALUES
   ('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 1),
