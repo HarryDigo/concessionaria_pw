@@ -33,3 +33,10 @@ INSERT INTO combustivel(combTipo, combNome)VALUES
 ('D', 'Diesel'),
 ('F', 'Flex'),
 ('G', 'Gasolina');
+
+INSERT INTO departamento(deptoCod, deptoNome)VALUES
+(1, 'Atendimento'),
+(2, 'Administrativo'),
+(3, 'Financeiro'),
+(4, 'Diretoria'),
+(5, 'Copa');
