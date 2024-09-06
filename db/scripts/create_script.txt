@@ -118,12 +118,13 @@ INSERT INTO categoria(catCod, catNome, catValor_km)VALUES
   (3, 'Luxo', 0.53),
   (4, 'Especial', 0.55);
 
+ALTER TABLE clientes MODIFY clienteCNH bigint(11);
 INSERT INTO clientes (clienteCPF, clienteNome, clienteEnde, clienteTel, clienteCidade, clienteDataNasc, clienteCNH, clienteCNHCat) VALUES
     ('123456789', 'Joao Silva', 'Rua das Flores, 123', '(11) 98765-4321', 'Sao Paulo', '1985-04-12', '12345678900', 'B'),
     ('987654321', 'Maria Oliveira', 'Avenida Paulista, 456', '(11) 91234-5678', 'Sao Paulo', '1990-08-22', '98765432101', 'A'),
     ('111222333', 'Pedro Santos', 'Rua da Praia, 789', '(21) 98765-1234', 'Rio de Janeiro', '1978-11-30', '11122233344', 'AB'),
     ('444555666', 'Ana Costa', 'Rua dos Jacarandas, 101', '(31) 92345-6789', 'Belo Horizonte', '1982-05-16', '44455566677', 'B'),
-    ('777888999', 'Carlos Pereira', 'Rua das Acacias, 202', '(61) 98765-4321', 'Brasí­lia', '1995-07-25', '77788899900', 'C'),
+    ('777888999', 'Carlos Pereira', 'Rua das Acacias, 202', '(61) 98765-4321', 'Brasi­lia', '1995-07-25', '77788899900', 'C'),
     ('222333444', 'Laura Mendes', 'Avenida Brasil, 303', '(41) 91234-5678', 'Curitiba', '1988-12-10', '22233344411', 'B'),
     ('555666777', 'Lucas Almeida', 'Rua das Palmeiras, 404', '(21) 99876-5432', 'Rio de Janeiro', '1993-03-05', '55566677722', 'A'),
     ('888999000', 'Fernanda Lima', 'Rua das Orquideas, 505', '(71) 98765-6789', 'Salvador', '1987-09-17', '88899900033', 'AB'),
