@@ -40,3 +40,9 @@ INSERT INTO departamento(deptoCod, deptoNome)VALUES
 (3, 'Financeiro'),
 (4, 'Diretoria'),
 (5, 'Copa');
+
+INSERT INTO categoria(catCod, catNome, catValor_km)VALUES
+(1, 'Basico', 0.49),
+(2, 'Utilitario', 0.51),
+(3, 'Luxo', 0.53),
+(4, 'Especial', 0.55);
