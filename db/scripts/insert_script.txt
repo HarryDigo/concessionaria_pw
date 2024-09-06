@@ -1,4 +1,4 @@
-INSERT INTO veiculos (veicPlaca, veicMarca, veicModelo, veicCor, veicAno, veicComb, veicCat, veicStatuslocado)VALUES
+INSERT INTO veiculos (veicPlaca, veicMarca, veicModelo, veicCor, veicAno, veicComb, veicCat, veicStatusAlocado)VALUES
 ('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 1),
 ('ACZ3243', 'VW', 'Fusca', 'Rosa', 1956, 'G', 4, 1),
 ('ADE3456', 'Chevrolet', 'Camaro', 'Amarelo', 2022, 'G', 4, 1),
