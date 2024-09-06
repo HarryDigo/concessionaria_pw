@@ -10,6 +10,25 @@ INSERT INTO clientes (clienteCPF, clienteNome, clienteEnde, clienteTel, clienteC
     ('333444555', 'Gustavo Rocha', 'Avenida Sete, 606', '(11) 93456-7890', 'São Paulo', '1980-01-20', '33344455544', 'C'),
     ('666777888', 'Juliana Campos', 'Rua dos Girassóis, 707', '(31) 91567-8901', 'Belo Horizonte', '1991-06-12', '66677788855', 'B');
 
+INSERT INTO funcionarios(funcMatricula, funcNome, funcDepto, funcSalario, funcAdmissao, funcFilho, funcSexo, funcAtivo) VALUES
+    (1001, 'Francisco de Oliveira', 1, '1800.00', '2001-11-20', 0, 'M', 1),
+    (1002, 'Ana Maria Andrade', 2, '3200.00', '1999-02-13', 1, 'F', 1),
+    (1003, 'Antônio Andrade de Oliveira', 3, '4800.00', '2007-11-05', 3, 'M', 1),
+    (1004, 'Maria Abelarda da Silva', 5, '937.00', '1997-03-01', 5, 'F', 1),
+    (1005, 'Manoel Trindade', 4, '7850.50', '1997-01-02', 3, 'M', 1),
+    (1006, 'Alexandre Barbosa', 1, '1800.00', '2000-06-08', 2, 'M', 1),
+    (1007, 'Rosana Campoy', 2, '3020.00', '2004-07-24', 3, 'F', 1),
+    (1008, 'Janaína Albuquerque', 3, '4500.00', '1999-03-25', 0, 'F', 1),
+    (1009, 'Roberto Silva Junior', 1, '1810.00', '2003-07-07', 0, 'M', 1),
+    (1010, 'Carlos Eduardo Siqueira', 4, '7890.00', '2009-08-04', 1, 'M', 1),
+    (1011, 'Heitor Sampaio', 1, '3450.00', '2011-03-05', 1, 'M', 1),
+    (1012, 'Célia Menezes', 1, '1980.00', '2008-07-18', 0, 'F', 1),
+    (1013, 'José Alves Costa', 1, '1650.00', '2000-09-11', 1, 'M', 1),
+    (1014, 'Arlinda Medeiros', 5, '937.00', '2000-05-03', 5, 'F', 1),
+    (1015, 'Josefina Sarmento', 4, '6789.00', '1997-01-02', 1, 'F', 1),
+    (1016, 'Wendell Navarro Perez', 3, '1212.00', '2004-04-15', 2, 'M', 1),
+    (1017, 'Rodolfo Rodrigues', 1, '8500.00', '2022-09-10', 2, 'M', 1);
+
 INSERT INTO veiculos (veicPlaca, veicMarca, veicModelo, veicCor, veicAno, veicComb, veicCat, veicStatusAlocado)VALUES
   ('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 1),
   ('ACZ3243', 'VW', 'Fusca', 'Rosa', 1956, 'G', 4, 1),
