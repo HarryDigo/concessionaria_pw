@@ -1,0 +1,17 @@
+INSERT INTO veiculos (veicPlaca, veicMarca, veicModelo, veicCor, veicAno, veicComb, veicCat, veicStatuslocado)VALUES
+('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 1),
+('ACZ3243', 'VW', 'Fusca', 'Rosa', 1956, 'G', 4, 1),
+('ADE3456', 'Chevrolet', 'Camaro', 'Amarelo', 2022, 'G', 4, 1),
+('ADW2456', 'VW', 'Gol', 'Vermelho', 2021, 'A', 1, 1),
+('ADX1473', 'Ford', 'Ka', 'Branco', 2021, 'A', 1, 1),
+('AQW1234', 'Ford', 'Fusion', 'Preto', 2022, 'F', 3, 1),
+('AQX3451', 'Porsche', 'Carrera', 'Preto', 2022, 'G', 4, 1),
+('AQY2005', 'Chevrolet', 'S10', 'Branco', 2022, 'D', 2, 1),
+('ASX3232', 'Ford', 'Ka', 'Marrom', 2022, 'F', 1, 1),
+('AVX4003', 'VW', 'Amarok', 'Preto', 2022, 'D', 2, 1),
+('AWQ3703', 'Chevrolet', 'Omega', 'Preto', 2022, 'G', 3, 1),
+('AWS2365', 'Chevrolet', 'Cruze', 'Azul', 2022, 'F', 3, 1),
+('AWV1234', 'Fiat', 'Palio', 'Branco', 2021, 'F', 1, 0),
+('AWV1323', 'VW', 'Gol', 'Branco', 2022, 'F', 1, 0),
+('AWY4546', 'Fiat', 'Fiorino', 'Branco', 2021, 'A', 2, 1),
+('AZX3273', 'VW', 'Fox', 'Azul', 2021, 'F', 1, 1);
