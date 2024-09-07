@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2024 at 11:51 PM
+-- Generation Time: Sep 07, 2024 at 01:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `categoria` (
-  `catCod` int(11) NOT NULL,
+  `catCod` int(9) NOT NULL,
   `catNome` varchar(20) NOT NULL,
   `catValorKm` decimal(8,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -46,7 +46,7 @@ CREATE TABLE `clientes` (
   `clienteTel` varchar(15) NOT NULL,
   `clienteCidade` varchar(60) NOT NULL,
   `clienteDataNasc` date NOT NULL,
-  `clienteCNH` int(11) NOT NULL,
+  `clienteCNH` bigint(11) NOT NULL,
   `clienteCNHCat` varchar(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -68,7 +68,7 @@ CREATE TABLE `combustivel` (
 --
 
 CREATE TABLE `departamento` (
-  `deptoCod` int(11) NOT NULL,
+  `deptoCod` int(9) NOT NULL,
   `deptoNome` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -79,12 +79,12 @@ CREATE TABLE `departamento` (
 --
 
 CREATE TABLE `funcionarios` (
-  `funcMatricula` int(4) NOT NULL,
+  `funcMatricula` smallint(4) NOT NULL,
   `funcNome` varchar(40) NOT NULL,
-  `funcDepto` int(1) NOT NULL,
+  `funcDepto` int(9) NOT NULL,
   `funcSalario` decimal(8,2) NOT NULL,
   `funcAdmissao` date NOT NULL,
-  `funcFilho` int(1) NOT NULL,
+  `funcFilho` tinyint(1) NOT NULL,
   `funcSexo` varchar(1) NOT NULL,
   `funcAtivo` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -96,8 +96,8 @@ CREATE TABLE `funcionarios` (
 --
 
 CREATE TABLE `ordem_servico` (
-  `osNum` int(11) NOT NULL,
-  `osFuncMat` int(4) NOT NULL,
+  `osNum` bigint(11) NOT NULL,
+  `osFuncMat` smallint(4) NOT NULL,
   `osClienteCPF` int(9) NOT NULL,
   `osVeicPlaca` char(7) NOT NULL,
   `osDataRetirada` date NOT NULL,
@@ -115,10 +115,10 @@ CREATE TABLE `ordem_servico` (
 --
 
 CREATE TABLE `usuarios` (
-  `usuarioLogin` int(11) NOT NULL,
+  `usuarioLogin` int(9) NOT NULL,
   `usuarioSenha` varchar(8) NOT NULL,
-  `usuarioFuncMat` int(4) DEFAULT NULL,
-  `usuarioSetor` int(11) NOT NULL,
+  `usuarioFuncMat` smallint(4) DEFAULT NULL,
+  `usuarioSetor` int(9) NOT NULL,
   `usuarioStatus` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -133,9 +133,9 @@ CREATE TABLE `veiculos` (
   `veicMarca` varchar(15) NOT NULL,
   `veicModelo` varchar(15) NOT NULL,
   `veicCor` varchar(15) DEFAULT NULL,
-  `veicAno` int(4) NOT NULL,
+  `veicAno` smallint(4) NOT NULL,
   `veicComb` char(1) DEFAULT NULL,
-  `veicCat` int(1) DEFAULT NULL,
+  `veicCat` int(9) DEFAULT NULL,
   `veicStatusAlocado` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -197,6 +197,34 @@ ALTER TABLE `veiculos`
   ADD PRIMARY KEY (`veicPlaca`),
   ADD KEY `veicComb` (`veicComb`),
   ADD KEY `veicCat` (`veicCat`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `catCod` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `departamento`
+--
+ALTER TABLE `departamento`
+  MODIFY `deptoCod` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `funcionarios`
+--
+ALTER TABLE `funcionarios`
+  MODIFY `funcMatricula` smallint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
+
+--
+-- AUTO_INCREMENT for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `usuarioLogin` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
