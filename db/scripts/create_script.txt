@@ -189,13 +189,16 @@ INSERT INTO ordem_servico(osNum, osFuncMat, osClienteCPF, osVeicPlaca, osDataRet
   ('2024111022', 1002, 333444555, 'ADX1473', '2024-06-30', '2024-07-25', '1400.00', '1500.00', '1', '590.00'),
   ('2024070604', 1011, 777888999, 'AQY2005', '2021-07-15', '2021-07-30', '1220.00', '1535.00', '1', '980.00');
 
-CREATE TRIGGER tr_veiculo_status 
-    AFTER INSERT ON ordem_servico 
-    FOR EACH ROW 
-        UPDATE veiculos SET veicStatusAlocado = 1 WHERE veicPlaca = NEW.osVeicPlaca;
+#triggers
 
 CREATE TRIGGER tr_func_user
     AFTER INSERT ON funcionarios
     FOR EACH ROW
         INSERT INTO usuarios(usuarioLogin, usuarioSenha) VALUES
             (NEW.funcMatricula, REPLACE(NEW.funcAdmissao, '-', ''));
+
+CREATE TRIGGER tr_veiculo_status 
+    AFTER INSERT ON ordem_servico 
+    FOR EACH ROW 
+        UPDATE veiculos SET veicStatusAlocado = 1 WHERE veicPlaca = NEW.osVeicPlaca;
+
