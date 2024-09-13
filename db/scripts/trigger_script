@@ -1,17 +1,16 @@
 #triggers
 
-CREATE TIGGER tr_func_user
+CREATE TRIGGER tr_func_user
     AFTER INSERT ON funcionarios
     FOR EACH ROW
-    BEGIN
         INSERT INTO usuarios(usuarioLogin, usuarioSenha) VALUES
             (NEW.funcMatricula, REPLACE(NEW.funcAdmissao, '-', ''));
 
-CREATE TRIGGER tr_veic_devolucao
-    AFTER UPDATE ON ordem_servico
+CREATE TRIGGER 'tr_veic_devolucao'
+    AFTER UPDATE ON 'ordem_servico'
     FOR EACH ROW
     BEGIN
-        UPDATE TABLE veiculos
+        UPDATE TABLE 'veiculos'
             SET veiculos.veicStatusAlocado = 0
             WHERE veiculos.veicPlaca = NEW.osVeicPlaca;
     END
