@@ -74,7 +74,7 @@ CREATE TABLE ordem_servico(
 );
 
 CREATE TABLE usuarios(
-    usuarioLogin int(9) NOT NULL AUTO_INCREMENT,
+    usuarioLogin int(9) NOT NULL,
     usuarioSenha varchar(8) NOT NULL,
     usuarioFuncMat smallint(4) NULL,
     usuarioSetor int(9) NOT NULL,
