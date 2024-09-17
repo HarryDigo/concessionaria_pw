@@ -1,0 +1,28 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.dm-sans-medium {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.dm-sans-bold {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 750;
+    font-style: normal;
+  }
+
+/* Classes de imagem */
+.login-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Classes Principais */
+.login-principal{
+    background: #7AEBEF;
+}
