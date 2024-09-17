@@ -1,7 +1,4 @@
-body{
-    height: 100%;
-    width: 100%;
-}
+
 
 /* Importação das fontes */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
@@ -28,4 +25,24 @@ body{
 /* Classes Principais */
 .login-principal{
 
+}
+
+.row-login{
+  background: #7AEBEF;
+  width: 100%;
+  height: 100%;
+}
+
+.coluna-login{
+  border: 1cm black;
+  border-radius: 10px 10px 10px 10px;
+  background: #F9FDFF;
+}
+
+
+
+body{
+  height: 100%;
+  width: 100%;
+  background-image: url(assets\background_test.webp);
 }
