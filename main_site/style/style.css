@@ -1,0 +1,87 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.dm-sans-medium {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.dm-sans-bold {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 750;
+    font-style: normal;
+    font-size: 3rem;
+  }
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+}
+
+.imagen-logo {
+    scale: 0.7;
+}
+
+/* Classes Principais - Página de Login*/
+.row-login{
+  background: #7AEBEF;
+  height: 100%;
+}
+
+.btn{}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #7AF0A4;
+}
+
+.coluna-login{
+  border: 1cm black;
+  border-radius: 10px 10px 10px 10px;
+  background: #F9FDFF;
+  width: 10vw;
+}
+
+.background-holder{
+  position: absolute;
+  width: 50vw;
+  min-height: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.divider-content-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1rem;
+  background-color: #F9FDFF;
+}
+
+.divider{
+  width: 30vw;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+}

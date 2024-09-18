@@ -105,3 +105,4 @@ ALTER TABLE ordem_servico
 
 ALTER TABLE usuarios
     ADD FOREIGN KEY (usuarioFuncMat) REFERENCES funcionarios(funcMatricula);
+ 
