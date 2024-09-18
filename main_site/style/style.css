@@ -1,13 +1,13 @@
-
-
 /* Importação das fontes */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 .dm-sans-medium {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  font-size: 2rem;
 }
 
 .dm-sans-bold {
@@ -15,30 +15,47 @@
     font-optical-sizing: auto;
     font-weight: 750;
     font-style: normal;
+    font-size: 3rem;
   }
 
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+}
+
 /* Classes de imagem */
-.login-background{
-
+.imagem-logo{
+  position: absolute;
+  top: 12%;
+  left: 2%;
 }
 
-/* Classes Principais */
-.login-principal{
-
-}
-
+/* Classes Principais - Página de Login*/
 .row-login{
   background: #7AEBEF;
-  width: 100%;
   height: 100%;
+}
+
+.btn{}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #7AF0A4;
 }
 
 .coluna-login{
   border: 1cm black;
   border-radius: 10px 10px 10px 10px;
   background: #F9FDFF;
-  height: 90vh;
-  width: 20vw;
+  height: 75vh;
+  width: 10vw;
 }
 
 .background-holder{
