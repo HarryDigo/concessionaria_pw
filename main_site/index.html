@@ -17,64 +17,72 @@
     <body style="background-color: #7AEBEF;">
             <div class="row align-items-center vh-100 g-0">
                 
-                            <!-- Coluna esquerda - Login -->
-                <div class="col coluna-login d-flex align-items-center justify-content-center flex-column">
+                <!-- Coluna esquerda - Login -->
+                <div class="col row">
+                    <div class="col-2"></div>
+                    <div class="col coluna-login d-flex align-items-center justify-content-center flex-column">
+    
+                        <!--Logo-->
+                        <div class="row d-flex col-12">
+                            <a href="#" class="col-4 d-flex justify-content-start">
+                                <img style="scale: 0.7" src="assets/Logo BQCars.svg" alt="">
+                            </a>
 
-                                    <!--Logo-->
-                    <div class="d-flex align-items-center justify-content-space-evenly">
-                    <a href="#" class="d-flex justify-content-start mb-4 imagem-logo">
-                        <img src="assets/Logo BQCars.svg" alt="">
-                    </a>
-                    <a href="#" class="d-flex justify-content-start mb-4" style="transform: translate(1600%, -800%); text-decoration: none;">
-                        <i class="fa-solid fa-x fa-2xl"></i>
-                    </a>
-                    </div>
-
-                    <h1 class="dm-sans-bold">LOGIN</h1>
-                    <h5 class="dm-sans-medium" style="margin-top: -20px; opacity: 60%;">Login usando suas redes</h5>
-                    <div class="d-flex flex-row">
-                        <i class="fa-brands fa-facebook p-3 fa-2xl"></i>
-                        <i class="fa-brands fa-instagram p-3 fa-2xl"></i>
-                        <i class="fa-brands fa-google p-3 fa-2xl"></i>
-                        
-                                    <!--Divisão-->
-                    </div>
-                    <div class="position-relative divider">
-                        <hr class="text-secondary">
+                            <div class="col-4 align-content-center text-center">
+                                <h1 class="dm-sans-bold">LOGIN</h1>
+                            </div>
+                            
+                            <a href="#" class="col-4 d-flex justify-content-end" style="text-decoration: none;">
+                                <i class="fa-solid fa-x fa-2xl pt-5"></i>
+                            </a>
+                        </div>
+    
+                        <h5 class="dm-sans-medium" style="margin-top: -20px; opacity: 60%;">Login usando suas redes</h5>
+                        <div class="d-flex flex-row">
+                            <i class="fa-brands fa-facebook p-3 fa-2xl"></i>
+                            <i class="fa-brands fa-instagram p-3 fa-2xl"></i>
+                            <i class="fa-brands fa-google p-3 fa-2xl"></i>
+                            
+                                        <!--Divisão-->
+                        </div>
+                        <div class="position-relative divider">
+                            <hr class="text-secondary">
                             <div class="divider-content-center">
                                 OU
                             </div>
-                    </div>
-
-                                    <!--Form-->
-                    <form action="" style="width: 30vw; font-size: 1.2rem;">
-                        <p style="margin-bottom: -0.1px;"> Endereço de Email</p>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">
-                            <i class="fa-solid fa-user"></i>
-                        </span>
-                        <input type="text" class="form-control form-control-lg fs-6" placeholder="Insira seu Email" style="height: 6vh;">
-                    </div>
-                    <p style="margin-bottom: -0.1px;"> Senha</p>
-                    <div class="input-group mb-3 d-flex">
-                        <span class="input-group-text">
-                            <i class="fa-solid fa-lock"></i>
-                        </span>
-                        <input type="text" class="form-control form-control-lg fs-6" placeholder="Insira sua senha" style="height: 6vh;">
-                    </div>
-                    <div class="input-group mb-3 d-flex justify-content-between">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="formCheck">
-                            <label for="formCheck" class="form-check-label text-secondary"><small>Lembrar-se de mim</small></label>
                         </div>
-                        <div>
-                            <small> <a href="#">Esqueci a senha</a></small>
+    
+                                        <!--Form-->
+                        <form class="px-5" action="" style="width: 100%; font-size: 1.2rem;">
+                            <p style="margin-bottom: -0.1px;"> Endereço de Email</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control form-control-lg fs-6" placeholder="Insira seu Email" style="height: 6vh;">
                         </div>
+                        <p style="margin-bottom: -0.1px;"> Senha</p>
+                        <div class="input-group mb-3 d-flex">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="text" class="form-control form-control-lg fs-6" placeholder="Insira sua senha" style="height: 6vh;">
+                        </div>
+                        <div class="input-group mb-3 d-flex justify-content-between">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="formCheck">
+                                <label for="formCheck" class="form-check-label text-secondary"><small>Lembrar-se de mim</small></label>
+                            </div>
+                                <div>
+                                <small> <a href="#">Esqueci a senha</a></small>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg w-100 ubuntu-bold">Login</button>
+                    </form>
+                    <p class="d-flex mt-3 ubuntu-regular" style="font-size: 1.2rem;">Não tem uma conta? ‎ <a href="#"> Crie uma!</a></p>
+                    <p class="mt-5">© BQCars - Todos os direitos reservados 2024</p>
                     </div>
-                    <button class="btn btn-primary btn-lg w-100 ubuntu-bold">Login</button>
-                </form>
-                <p class="d-flex mt-3 ubuntu-regular" style="font-size: 1.2rem;">Não tem uma conta? ‎ <a href="#"> Crie uma!</a></p>
-                <p class="mt-5">© BQCars - Todos os direitos reservados 2024</p>
+                    <div class="col-2"></div>
                 </div>
                             <!-- Coluna direita - Imagem -->
                 <div class="col-lg-6 d-none d-lg-block">
