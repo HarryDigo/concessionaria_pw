@@ -20,7 +20,7 @@
 
 .ubuntu-bold {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -84,6 +84,13 @@
 .divider{
   width: 30vw;
 }
+
+.hover-verde:hover{
+  background-color: #7AF0A4;
+  transition: ease-in-out 0.2s;
+}
+
+.transicao-botao
 
 body{
   height: 100%;
