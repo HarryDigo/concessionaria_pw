@@ -32,13 +32,6 @@
   font-style: normal;
 }
 
-/* Classes de imagem */
-.imagem-logo{
-  position: absolute;
-  top: 12%;
-  left: 2%;
-}
-
 /* Classes Principais - Página de Login*/
 .row-login{
   background: #7AEBEF;
@@ -70,8 +63,6 @@
   border: 1cm black;
   border-radius: 10px 10px 10px 10px;
   background: #F9FDFF;
-  height: 75vh;
-  width: 10vw;
 }
 
 .background-holder{
