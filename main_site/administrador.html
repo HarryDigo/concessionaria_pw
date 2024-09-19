@@ -16,8 +16,9 @@
     </head>
         <body style="background-color: #7AEBEF;">
             <div class="row col-12 vh-100 d-flex">
+
                 <!--SideBar dos administradores -->
-                <div class="col-2 flex-direction-column p-3 justify-content-center" style="background-color: #F9FDFF;">
+                <div class="col-2 flex-direction-column p-3 justify-content-center d-none d-md-block" style="background-color: #F9FDFF; box-shadow: 4px 0px 4px 1px rgba(0, 0, 0, 0.2);">
                     <a href="/" class="d-flex align-items-center pb-3 mb-3 mt-3 link-dark text-decoration-none border-bottom justify-content-center">
                         <img src="assets/Logo BQCars.svg" alt="" height="120" width="150">
                     </a>
@@ -60,27 +61,28 @@
                 <div class="col-10 justify-content-center">
                     <div class="row align-items-center justify-content-center d-flex">
                         <div class="col-6 ubuntu-bold mt-3 d-flex" style="font-size: 3rem; border-right: 2px solid black; line-height: 95%;">
-                            <p class="ms-5 p-3">
+                            <p class="ms-5 p-3 d-none d-md-block">
                             Esta é a tela dos administradores do sistema! 
                             </p>
+                            <p class="ms-5 p-3 d-md-none fs-1 d-flex justify-content-start">
+                                Nome de Usuário:
+                                <span style="font-weight: 100;"> Matricula: </span>
+                            </p>
                         </div>
-                        <div class="col-6 ubuntu-regular" style="font-size: 2rem;">
+                        <div class="col-6 ubuntu-regular d-none d-md-block" style="font-size: 2rem;">
                             <p style="font-weight: 1000;">Nome de Usuário: </p>
                             <p style="margin-top: -1.3rem;">Matricula: </p>
                         </div>
                     </div>
 
                     <div class="row d-flex p-3 my-4 mb-5" style="justify-content: space-evenly;">
-                        <div class="row col-4">
-                            <div class="col-lg-2"></div>
 
+                        <div class="row col-lg-4 col-md-4 col-12 mb-3 p-3 ms-1">
+                            <div class="col-lg-2"></div>
                             <div class="col-lg-8 col-md-10 d-flex dm-sans-medium fs-4" style="text-align: center;">
                                 <div class="p-3 justify-content-center" style="height: 110%; border: 1px solid black; border-radius: 10px; background-color: #7AF0CC; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
-
                                     <p class="d-inline-block">Usuários Cadastrados</p>
-
                                     <p> <bold>1</bold></p>
-
                                     <div class="d-flex align-items-center justify-content-center mx-4 py-3" style="background-color: #F9FDFF; border: 1px solid black; border-radius: 10px;">
                                         <p class="px-2">Marco Aurélio <i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
@@ -88,17 +90,15 @@
                             </div>
 
                             <div class="col-lg-2"></div>
+
                         </div>
 
-                        <div class="row col-4">
+                        <div class="row col-lg-4 col-md-4 col-12 mb-3 p-3 ms-1">
                             <div class="col-lg-2"></div>
-
                             <div class="col-lg-8 col-md-10 d-flex dm-sans-medium fs-4" style="text-align: center;">
                                 <div class="p-3 justify-content-center" style="height: 110%; border: 1px solid black; border-radius: 10px; background-color: #7AF0CC; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
-                                    
                                     <p class="d-inline-block">Funcionarios Cadastrados</p>
                                     <p class="d-inline-block"> <strong>2</strong></p>
-
                                     <div class="d-flex align-items-center justify-content-center mx-4 py-3 mb-2" style="background-color: #F9FDFF; border: 1px solid black; border-radius: 10px;">
                                         <p class="px-2">José Rubens <i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
@@ -109,15 +109,14 @@
                             </div>
 
                             <div class="col-lg-2"></div>
+
                         </div>
 
-                        <div class="row col-4">
+                        <div class="row col-lg-4 col-md-4 col-12 mb-3 p-3 ms-1">
                             <div class="col-lg-2"></div>
-
                             <div class="col-lg-8 col-md-10 d-flex dm-sans-medium" style="text-align: center; font-size: 1.7rem;">
                                 <div class="p-3 justify-content-center" style="height: 110%; border: 1px solid black; border-radius: 10px; background-color: #7AF0CC; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                                     <p class="d-inline-block">Lucro Esperado</p>
-
                                     <div class="d-flex align-items-center justify-content-center mx-4 py-3" style="height: 50%; background-color: #F9FDFF; border: 1px solid black; border-radius: 10px;">
                                         <p class="px-2">R$14.980,00</p>
                                     </div>
@@ -130,7 +129,42 @@
                     <div class="row d-flex ms-5 p-1 mt-5 mb-2" style="font-size: 2.2rem; width: 92%; background-color: #F9FDFF; border: 1px solid black; border-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <p>Com os botões ao lado, você pode obter informações mais <strong>detalhadas </strong>sobre o grupo escolhido.</p>
                     </div>
-                    <p class="ms-5 p-3 dm-sans-bold" style="font-size: 2rem; border-bottom: 1px solid gray;">Experimente usar os botões ao lado!</p>
+                    <p class="ms-5 p-3 dm-sans-bold d-none d-md-block" style="font-size: 2rem; border-bottom: 1px solid gray;">Experimente usar os botões ao lado!</p>
+                    <p class="ms-5 p-3 dm-sans-bold d-md-none" style="font-size: 2rem; border-bottom: 1px solid gray;">Experimente usar o botão abaixo!</p>
+                    <!-- Menu Offcanvas para dispositivos mobile -->
+                        <div class="d-md-none d-inline-block ps-4 ms-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Menu de Administrador</button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu de Administrador</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ms-4" style="display: flex;  width: 80%; align-items: center; flex-direction: column; justify-content: center;">
+                                        <div style="border: 1px solid black; border-radius: 10px; width: 90%;" class="p-3 m-2 hover-verde">
+                                            <li class="d-flex flex-direction-column align-items-center justify-content-center p-4"><a href="#" class="link-dark rounded"><i class="fa-solid fa-user fa-2xl"></i> </li>
+                                            <li class="d-flex justify-content-center">Clientes</li></a>
+                                        </div>
+                                        <div style="border: 1px solid black; border-radius: 10px; width: 90%;" class="p-3 m-2 hover-verde">
+                                            <li class="d-flex flex-direction-column align-items-center justify-content-center p-4"><a href="#" class="link-dark rounded"><i class="fa-solid fa-users fa-2xl"></i> </li>
+                                            <li class="d-flex justify-content-center">Funcionários</li></a>
+                                        </div>
+                                        <div style="border: 1px solid black; border-radius: 10px; width: 90%;" class="p-3 m-2 hover-verde">
+                                            <li class="d-flex flex-direction-column align-items-center justify-content-center p-4"><a href="#" class="link-dark rounded"><i class="fa-solid fa-car fa-2xl"></i></li>
+                                            <li class="d-flex justify-content-center">Veículos</li></a>
+                                        </div>
+                                        <div style="border: 1px solid black; border-radius: 10px; width: 90%;" class="p-3 m-2 hover-verde">
+                                            <li class="d-flex flex-direction-column align-items-center justify-content-center p-4"><a href="#" class="link-dark rounded"><i class="fa-solid fa-calendar fa-2xl"></i></li>
+                                            <li class="d-flex justify-content-center">Ordem de Serviço</li></a>
+                                        </div>
+                                    </ul>
+                                </div>
+                                </li>
+                                
+                            </ul>
+                                </div>
+                        </div>
+
                     <p class="ms-5 p-3" style="text-align: center;">© BQCars - Todos os direitos reservados 2024</p>
                 </div>
             </div>
