@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Página de busca de carros do BQCars"> 
+        <meta name="description" content="Página de busca de ordens de serviço do BQCars"> 
         <meta name="author" content="Samuel Augusto de Oliveira e Rodrigo Scatolin Flora do Rio">
-        <title>Busca Carros | BQ Cars</title>
+        <title>Busca Ordem de Serviço | BQ Cars</title>
 
         <script type="javascript/text" src="script/script.js"></script>
         <style>
@@ -14,7 +14,7 @@
         <script src="https://kit.fontawesome.com/26a3821824.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
-<body style="background-color: #7AF0A3;">
+<body style="background-color: #5AD083;">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"">
         <div class="container-fluid d-flex">
@@ -28,20 +28,22 @@
             <ul class="navbar-nav mx-auto align-items-center">
                 <li class="nav-item">
                     <div class="d-flex h-100 flex-column align-items-center justify-content-center p-4 hover-azul" style="cursor: pointer;">
-                        <a href="busca_ordemservico.html" style="text-decoration: none;">
+                        <a href="busca_funcionarios.html" style="text-decoration: none;">
                         <i class="fa-solid fa-angle-left text-center fs-1 me-2 mt-4"></i>
+
                         <p class="ubuntu-bold text-center me-2 fs-4" style="font-weight: 200;">Anterior</p> 
                         </a>
                     </div>
                 </li>
               <li class="nav-item">
-                <p class="ubuntu-bold text-center " style="font-size: 3rem;"> Busca de carros </p>
+                <p class="ubuntu-bold text-center " style="font-size: 3rem;"> Busca de ordem de serviço </p>
               </li>
               <li class="nav-item">
                 <div class="d-flex h-100 flex-column align-items-center justify-content-center p-4 hover-azul" style="cursor: pointer;">
-                    <a href="busca_clientes.html" style="text-decoration: none;">
+                    <a href="busca_carros.html" style="text-decoration: none;">
                     <i class="fa-solid fa-angle-right text-center fs-1 ms-2 mt-4" ></i>
-                    <p class="ubuntu-bold text-center ms-2 fs-4" style="font-weight: 200;">Próximo</p> 
+
+                        <p class="ubuntu-bold text-center ms-2 fs-4" style="font-weight: 200;">Próximo</p> 
                     </a>
                 </div>
                 </li>
@@ -64,15 +66,18 @@
                 
                 <div class="col-8">
                     <div class="input-group mb-3" style="cursor: pointer; height: 100%; background-color: #C9EEF0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
-                        <input type="text" class="form-control" placeholder="Pesquisa por placa..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" placeholder="Pesquisa por número..." aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <span class="input-group-text d-flex justify-content-center" id="basic-addon2" style="width: 15%;"><i class="fa-solid fa-check"></i></span>
                       </div>
                 </div>
 
+                
                     <div class="col-4">
+                        <a href="cadastro_ordemservico.html" style="text-decoration: none;">
                     <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-5" style="cursor: pointer; height: 100%; background-color: #C9EEF0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <i class="fa-solid fa-paperclip p-2"></i>
                         Tela de Cadastro
+                    </a>
                     </div>
                 </div>
             </div>
@@ -80,13 +85,13 @@
 
             <!-- Carro Cosmético -->
             <div class="row w-100 d-flex mt-5 fs-4" style="height: 70%; background-color: #F7FBFF; border-radius: 10px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
-                <div class="col-2 d-md-flex d-none align-items-center justify-content-center mt-2 mb-2 flex-column" style="border-right: 1px solid black; text-align: center;">
+                <div class="col-2 d-md-flex d-none align-items-center justify-content-center mt-2 mb-2 flex-column mt-5 py-5" style="border-right: 1px solid black; text-align: center;">
                     <div class="">
-                        <i class="fa-solid fa-car fa-2xl" style="font-size: 8rem;"></i> 
-                        <p class="mt-4 py-5 ubuntu-bold fs-4" style="border-bottom: 1px solid black;">Chevrolet S10</p>
+                        <i class="fa-solid fa-dollar fa-2xl" style="font-size: 8rem;"></i> 
+                        <p class="mt-4 py-5 ubuntu-bold fs-4" style="border-bottom: 1px solid black;">Ordem Nº 20230244</p>
                     </div>
                     <div>
-                        <span class="fs-6 dm-sans-medium" style="font-weight: 500 !important;">Disponível desde 2010</span>
+                        <span class="fs-6 dm-sans-medium" style="font-weight: 500 !important;">Disponível desde 2024</span>
                         <button class="btn btn-editar fs-6" style="width: 40%;"> Salvar </button>
                         <span style="font-size: 0.85rem;">
                             ou
@@ -95,17 +100,22 @@
                     </div>
                 </div>
             <!-- Lugar para inserção das infos -->
-                <div class="col-10 flex-column p-3 ubuntu-regular">
-                    <p class="p-1" style="font-weight: 200;"><span style="font-weight: 700;">Placa:</span> EUS3XU4</p>
-                    <p class="p-1" style="font-weight: 200;"><span style="font-weight: 700;">Marca:</span> Chevrolet</p>
-                    <p class="p-1" style="font-weight: 200;"><span style="font-weight: 700;">Modelo:</span> S10</p>
-                    <p class="p-1" style="font-weight: 200;"><span style="font-weight: 700;">Combustível:</span> Etanol</p>
-                    <p class="p-1" style="font-weight: 200;"><span style="font-weight: 700;">Cor:</span> Prata</p>
-                    <p class="p-1" style="font-weight: 200;"><span style="font-weight: 700;">Ano:</span> 2010</p>
-                    <p class="p-1" style="font-weight: 200;"><span style="font-weight: 700;">Categoria:</span> 5</p>
-                    <p class="p-1" style="font-weight: 200;"><span style="font-weight: 700;">Status Alocado:</span> Disponível</p>
+                <div class="col-5 flex-column p-4 ubuntu-regular">
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Número:</span> 20230244</p>
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Funcionário Matrícula:</span> 3221</p>
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Cliente CPF:</span> S10.992.827-32</p>
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Data Retirada:</span> 30/02/2024</p>
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Km Retirada:</span> 8100km</p>
                 </div>
+
+                <div class="col-5 flex-column p-4 ubuntu-regular">
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Status:</span> Terminada</p>
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Valor:</span> R$990,90</p>
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Veiculo Placa:</span> EUS3XU4</p>
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Data devolução:</span> 30/11/2024</p>
+                    <p class="p-2" style="font-weight: 200;"><span style="font-weight: 700;">Km Devolução:</span> 9000km</p>
                 
+                </div>
                 <div class="d-flex d-md-none mb-3">
                     <button class="btn btn-editar fs-6" style="width: 40%;"> Salvar </button>
                     <span style="font-size: 0.85rem;" class="p-2">

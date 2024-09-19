@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Página de Cadastro de funcionários do BQCars"> 
+        <meta name="description" content="Página de Cadastro de ordem de serviço do BQCars"> 
         <meta name="author" content="Samuel Augusto de Oliveira e Rodrigo Scatolin Flora do Rio">
-        <title>Cadastro Funcionarios | BQ Cars</title>
+        <title>Cadastro Ordem de Serviço | BQ Cars</title>
 
         <script type="javascript/text" src="script/script.js"></script>
         <style>
@@ -14,7 +14,7 @@
         <script src="https://kit.fontawesome.com/26a3821824.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
-<body style="background-color: #C9EEF0;">
+<body style="background-color: #7AA1F0;">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex" style=" box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"">
         <div class="container-fluid d-flex">
@@ -27,7 +27,7 @@
           <div class="collapse navbar-collapse align-items-center" id="navbarTogglerDemo02">
             <ul class="navbar-nav mx-auto align-items-center">
               <li class="nav-item">
-                <p class="ubuntu-bold text-center" style="font-size: 2.7rem;"> Cadastro de Funcionários</p>
+                <p class="ubuntu-bold text-center" style="font-size: 2.7rem;"> Cadastro de Ordem de Serviço</p>
               </li>
               <li class="nav-item">
                 <ul class="navbar-nav ms-auto ubuntu-regular ps-5" style="font-size: 2rem; line-height: 30px; font-weight: 100;"> <!--Lista feia pelo bootstrap-->
@@ -38,8 +38,8 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="cadastro_carros.html" id="filtroTodos" value="1">Cadastro de Carros</a></li>
                             <li><a class="dropdown-item" href="cadastro_clientes.html" id="filtroBranco" value="2">Cadastro de Clientes</a> </li>
-                            <li><a class="dropdown-item active" href="cadastro_funcionarios.html" id="filtroTinto" value="3">Cadastro de Funcionários</a> </li>
-                            <li><a class="dropdown-item" href="cadastro_ordemservico.html" id="filtroRose" value="4">Cadastro de Ordem de Serviço</a> </li>
+                            <li><a class="dropdown-item" href="cadastro_funcionarios.html" id="filtroTinto" value="3">Cadastro de Funcionários</a> </li>
+                            <li><a class="dropdown-item active" href="cadastro_ordemservico.html" id="filtroRose" value="4">Cadastro de Ordem de Serviço</a> </li>
                         </ul>
                     </li>
                 </ul>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-5" style="cursor: pointer; height: 140%; background-color: #7AA1F0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-5" style="cursor: pointer; height: 140%; background-color: #7AECF0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <i class="fa-solid fa-x p-2"></i>
                         Excluir
                     </div>
@@ -84,8 +84,8 @@
             <div class="row w-100 d-flex mt-5 fs-4" style="height: 70%; background-color: #F7FBFF; border-radius: 10px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                 <div class="col-2 d-md-flex d-none align-items-center justify-content-center mt-2 mb-2 flex-column" style="border-right: 1px solid black; text-align: center;">
                     <div class="">
-                        <i class="fa-solid fa-users fa-2xl" style="font-size: 8rem;"></i> 
-                        <p class="mt-4 py-5 ubuntu-bold fs-4" style="border-bottom: 1px solid black;">Novo Cliente</p>
+                        <i class="fa-solid fa-dollar fa-2xl" style="font-size: 8rem;"></i> 
+                        <p class="mt-4 py-5 ubuntu-bold fs-4" style="border-bottom: 1px solid black;">Nova Ordem de Serviço</p>
                     </div>
                     
                     <button class="btn btn-salvar mt-3"> Salvar </button>
@@ -93,45 +93,27 @@
 
             <!-- Lugar para inserção das infos -->
                 <div class="col-5 flex-column p-3 ubuntu-regular">
-                    <label for="placa">Nome:</label>
+                    <label for="placa">Número:</label>
                     <input type="text" id="placa" required="" class="input" style="font-weight: 100;">
 
-                    <label for="modelo">Matrícula:</label>
+                    <label for="modelo">Funcionário Matrícula:</label>
                     <input type="text" id="modelo" required="" class="input" placeholder="   /   /  " style="font-weight: 100;">
 
-                    <label for="cor">Salário:</label>
+                    <label for="cor" style="margin-top: 51px;">Veículo Placa:</label>
                     <input type="text" id="cor" required="" class="input" style="font-weight: 100;">
 
-                    <div class="form-check mt-2">
-                        <p class="ms-n1" style="margin-left: -36px;">Filho:</p>
-                        <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault1">
-
-                        <label class="form-check-label" for="flexRadioDefault1">Sim</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault2" checked>
-
-                        <label class="form-check-label" for="flexRadioDefault2">Não</label>
-                    </div>
+                    <label for="dataretirada">Data Retirada:</label>
+                    <input type="text" id="dataretirada" required="" class="input" style="font-weight: 100;">
+                    
+                    <label for="kmretirada">Km Retirada:</label>
+                    <input type="text" id="kmretirada" required="" class="input" style="font-weight: 100;">
                 </div>
 
                 <div class="col-5 flex-column p-3 ubuntu-regular">
-                    <label for="marca">Departamento:</label>
+                    <label for="marca">CPF Cliente:</label>
                     <input type="text" id="marca" required="" class="input" style="font-weight: 100;"> 
 
-                    <label for="sexo">Sexo:</label>
-                    <select class="form-select mt-2" aria-label="Default select example" id="sexo">
-                        <option selected>Selecione..</option>
-                        <option value="1">Feminino</option>
-                        <option value="2">Masculino</option>
-                        <option value="3">Não Binário</option>
-                      </select>
-
-                      <label for="cidade" class="mt-3" style="padding-top: 4px;">Admissão:</label>
-                      <input type="text" id="cidade" required="" class="input" style="font-weight: 100;">
-
-                    <div class="form-check mt-2">
+                    <div class="form-check mt-2 d">
                         <p class="ms-n1" style="margin-left: -36px;">Status:</p>
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
 
@@ -143,6 +125,16 @@
 
                         <label class="form-check-label" for="flexRadioDefault2">Ativo</label>
                     </div>
+
+
+                    <label for="valopgto" class="mt-3" style="padding-top: 4px;">Valor Pagamento:</label>
+                    <input type="text" id="valorpgto" required="" class="input" style="font-weight: 100;">
+
+                    <label for="datadevolucao" class="mt-3" style="padding-top: 4px;">Data devolução:</label>
+                    <input type="text" id="datadevolucao" required="" class="input" style="font-weight: 100;">
+                    
+                    <label for="kmdevolucao" class="mt-3" style="padding-top: 4px;">Km devolução:</label>
+                    <input type="text" id="kmdevolucao" required="" class="input" style="font-weight: 100;">
 
                     
                     <div class="d-flex d-md-none">
