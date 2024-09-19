@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-* {}
-
 .dm-sans-medium {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -22,7 +20,7 @@
 
 .ubuntu-bold {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -32,6 +30,10 @@
   font-style: normal;
 }
 
+.imagen-logo {
+    scale: 0.7;
+}
+
 /* Classes Principais - Página de Login*/
 .row-login{
   background: #7AEBEF;
@@ -39,20 +41,19 @@
 }
 
 .input{
-    height: 45px;
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    outline: none;
-    margin-bottom: 20px;
-    color: #40414a;
+  height: 45px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  margin-bottom: 20px;
+  color: #40414a;
 }
 
 .input label{
-  margin-top: -20px;
+margin-top: -20px;
 }
-.btn{}
 
 .btn-primary {
     --bs-btn-color: #fff;
@@ -63,6 +64,7 @@
   border: 1cm black;
   border-radius: 10px 10px 10px 10px;
   background: #F9FDFF;
+  width: 10vw;
 }
 
 .background-holder{
@@ -73,8 +75,8 @@
   top: 0;
   right: 0;
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+
 }
 
 .divider-content-center{
@@ -91,13 +93,6 @@
 .divider{
   width: 30vw;
 }
-
-.hover-verde:hover{
-  background-color: #7AF0A4;
-  transition: ease-in-out 0.2s;
-}
-
-.transicao-botao
 
 body{
   height: 100%;
