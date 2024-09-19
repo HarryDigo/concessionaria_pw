@@ -16,71 +16,63 @@
     </head>
 <body style="background-color: #7AC7F0;">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top" style="max-height: 12.5%; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"> <!--Barra de navegação do bootstrap-->
-        <div class="container-fluid justify-content-between"><!--Container fluido usado anteriormente com um justify content between-->
-            <div class="d-flex"> <!--Display flex aplicado com bootstrap-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span><!--botão pra colapsar a barra se a width for muito pequena-->
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNavDropdown"> <!-- conteudo da barra colapsável -->
-                    <a class="navbar-brand me-2 mb-1 d-flex align-items-center ms-5" href="#"> 
-                        <img src="assets/Logo BQCars.svg" height="120" alt="" loading="lazy" style="margin-top: 2px;"/>
-                    </a>
-                </div>
-            </div>
-
-            <p class="d-flex ubuntu-bold fs-1" style="text-align: center;"> Cadastro de Carros</p>
-        
-            <ul class="navbar-nav d-flex align-items-center ubuntu-regular fs-2"> <!--Lista feia pelo bootstrap-->
-                <li class="nav-item dropdown">        <!-- Dropdown do Bootstrap -->
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Outras <br/> Opções
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item active" href="#" id="filtroTodos" value="1">Cadastro de Veículos</a></li>
-                        <li><a class="dropdown-item" href="#" id="filtroBranco" value="2">Cadastro de Clientes</a> </li>
-                        <li><a class="dropdown-item" href="#" id="filtroTinto" value="3">Cadastro de Funcionários</a> </li>
-                        <li><a class="dropdown-item" href="#" id="filtroRose" value="4">Cadastro de Ordem de Serviço</a> </li>
-                    </ul>
-                </li>
-            </ul>
-            <!--Carrinho de compras que fica offcanva feito pelo bootstrap-->
-            <div class="d-flex align-items-center justify-content-space-around">
-                <ul class="navbar-nav flex-row d-md-flex pr-5"> <!--aqui o bootstrap usa das suas predefinições de navbar, atribuo ao flex orientation um valor de row e margens / paddings -->
-                    <li class="nav-item mr-4">
-                        <a href="#">
-
-                        <div style="border-left: 2px solid black; border-radius: 0px 0px 0px 0px; width: 90%; text-decoration: none;" class="text-center justify-content-end px-3 m-2 hover-verde align-self-center ubuntu-regular"> 
-                            <i class="icon-login fa-solid fa-house fa-4x p-2"></i>
-                            
-                            <p class="align-self-center source-serif-4-regular" style="text-decoration: none;"> Tela Inicial </p>
-                        </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"">
+        <div class="container-fluid d-flex">
+          <a class="navbar-brand" class="me-2 mb-1 d-flex align-items-center ms-6" href="#">
+            <img src="assets/Logo BQCars.svg" height="120" alt="" loading="lazy" style="margin-top: 2px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse align-items-center" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mx-auto align-items-center">
+              <li class="nav-item">
+                <p class="ubuntu-bold text-center" style="font-size: 2.7rem;"> Cadastro de Carros</p>
+              </li>
+              <li class="nav-item">
+                <ul class="navbar-nav ms-auto ubuntu-regular ps-5" style="font-size: 2rem; line-height: 30px; font-weight: 100;"> <!--Lista feia pelo bootstrap-->
+                    <li class="nav-item dropdown">        <!-- Dropdown do Bootstrap -->
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Outras <br/> Opções
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#" id="filtroTodos" value="1">Tela Inicial</a></li>
+                            <li><a class="dropdown-item" href="#" id="filtroBranco" value="2">Cadastro de Clientes</a> </li>
+                            <li><a class="dropdown-item" href="#" id="filtroTinto" value="3">Cadastro de Funcionários</a> </li>
+                            <li><a class="dropdown-item" href="#" id="filtroRose" value="4">Cadastro de Ordem de Serviço</a> </li>
+                        </ul>
                     </li>
                 </ul>
-            </div>
+              </li>
+            </ul>
+            <a href="#" style="text-decoration: none;">
+                <div style="border-left: 2px solid black; border-radius: 0px 0px 0px 0px; width: 90%; text-decoration: none;" class="text-center justify-content-end px-3 m-2 align-self-center ubuntu-regular"> 
+                    <i class="icon-login fa-solid fa-house fa-4x p-2"></i>
+                    <p class="align-self-center source-serif-4-regular" style="text-decoration: none;"> Tela Inicial </p>
+                </div>
+                </a>
+          </div>
         </div>
-    </nav>
-
+      </nav>
         <!-- Divisão principal da página -->
 
-        <div class="container-lg position-relative" style="margin-top: 10%;">
-            <div class="row w-100 justify-content-center d-flex pt-2" style="text-align: center; ">
+        <div class="container-lg position-relative" style="margin-top: 3%;">
+            <div class="row w-100 justify-content-center d-flex pt-2" style="text-align: center;">
+                
                 <div class="col-4">
-                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" style="height: 100%; background-color: #7AF0CC;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" onclick="novoCadastro" style="cursor: pointer; height: 100%; background-color: #7AF0CC;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <i class="fa-solid fa-file p-2"></i>
                         Novo Cadastro
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" style="height: 100%; background-color: #7AA1F0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" style="cursor: pointer; height: 100%; background-color: #7AA1F0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <i class="fa-solid fa-x p-2"></i>
                         Excluir
                     </div>
                 </div>
                     <div class="col-4">
-                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" style="height: 100%; background-color: #C9EEF0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" style="cursor: pointer; height: 100%; background-color: #C9EEF0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <i class="fa-solid fa-pen p-2"></i>
                         Editar
                     </div>
@@ -141,11 +133,11 @@
             <!--Aqui ficam as funções de próximo, anterior, primeiro e último-->
             <div class="row d-flex align-items-center justify-content-center w-100 flex-row mt-5 fs-1" style="text-align: center; max-height: 20%;">
                 <div>
-                <i class="fa-solid fa-backward-fast"></i>
-                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-backward-fast" style="cursor: pointer;"></i>
+                <i class="fa-solid fa-backward-step" style="cursor: pointer;"></i>
                 <span class="ubuntu-regular"> 1 - 15</span>
-                <i class="fa-solid fa-forward-step"></i>
-                <i class="fa-solid fa-forward-fast"></i>
+                <i class="fa-solid fa-forward-step" style="cursor: pointer;"></i>
+                <i class="fa-solid fa-forward-fast" style="cursor: pointer;"></i>
             </div>
             </div>
             <span class="d-flex align-items-center justify-content-center mt-4 w-100" style="text-align: center;">© BQCars - Todos os direitos reservados 2024</span>
