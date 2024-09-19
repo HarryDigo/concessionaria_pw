@@ -30,15 +30,15 @@
                 </div>
             </div>
 
-            <p class="d-flex ubuntu-bold" style="text-align: center; font-size: 2.7rem;"> Cadastro de Carros</p>
+            <p class="d-flex ubuntu-bold fs-1" style="text-align: center;"> Cadastro de Carros</p>
         
-            <ul class="navbar-nav d-flex align-items-center ubuntu-regular" style="font-size: 2rem;"> <!--Lista feia pelo bootstrap-->
+            <ul class="navbar-nav d-flex align-items-center ubuntu-regular fs-2"> <!--Lista feia pelo bootstrap-->
                 <li class="nav-item dropdown">        <!-- Dropdown do Bootstrap -->
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Outras <br/> Opções
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item active" href="#" id="filtroTodos" value="1">Tela Inicial</a></li>
+                        <li><a class="dropdown-item active" href="#" id="filtroTodos" value="1">Cadastro de Veículos</a></li>
                         <li><a class="dropdown-item" href="#" id="filtroBranco" value="2">Cadastro de Clientes</a> </li>
                         <li><a class="dropdown-item" href="#" id="filtroTinto" value="3">Cadastro de Funcionários</a> </li>
                         <li><a class="dropdown-item" href="#" id="filtroRose" value="4">Cadastro de Ordem de Serviço</a> </li>
@@ -68,19 +68,19 @@
         <div class="container-lg position-relative" style="margin-top: 10%;">
             <div class="row w-100 justify-content-center d-flex pt-2" style="text-align: center; ">
                 <div class="col-4">
-                    <div class="ubuntu-bold d-flex align-items-center justify-content-center" style="font-size: 1.3rem; height: 5vh; background-color: #7AF0CC;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" style="height: 100%; background-color: #7AF0CC;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <i class="fa-solid fa-file p-2"></i>
                         Novo Cadastro
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="ubuntu-bold d-flex align-items-center justify-content-center" style="font-size: 1.3rem; height: 5vh; background-color: #7AA1F0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" style="height: 100%; background-color: #7AA1F0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <i class="fa-solid fa-x p-2"></i>
                         Excluir
                     </div>
                 </div>
                     <div class="col-4">
-                    <div class="ubuntu-bold d-flex align-items-center justify-content-center" style="font-size: 1.3rem; height: 5vh; background-color: #C9EEF0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <div class="ubuntu-bold d-flex align-items-center justify-content-center fs-4" style="height: 100%; background-color: #C9EEF0;border-radius: 5px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                         <i class="fa-solid fa-pen p-2"></i>
                         Editar
                     </div>
@@ -89,14 +89,14 @@
 
             <!-- Lugar para inserção das infos -->
 
-            <div class="row w-100 d-flex mt-5" style="font-size: 1.5rem; height: 50vh; background-color: #F7FBFF; border-radius: 10px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+            <div class="row w-100 d-flex mt-5 fs-4" style="height: 50%; background-color: #F7FBFF; border-radius: 10px; border: 1px solid black; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
                 <div class="col-2 d-flex align-items-center justify-content-center mt-2 mb-2 flex-column" style="border-right: 1px solid black; text-align: center;">
                     <div class="">
                         <i class="fa-solid fa-car fa-2xl" style="font-size: 8rem;"></i> 
-                        <p class="mt-4 py-5 ubuntu-bold" style="border-bottom: 1px solid black; font-size: 1.5rem;">Novo Veiculo</p>
+                        <p class="mt-4 py-5 ubuntu-bold fs-4" style="border-bottom: 1px solid black;">Novo Veiculo</p>
                     </div>
-
-                    <button class="btn btn-primary mt-3"> Salvar </button>
+                    
+                    <button class="btn btn-salvar mt-3"> Salvar </button>
                 </div>
 
                 <div class="col-5 flex-column p-3 ubuntu-regular">
@@ -139,7 +139,7 @@
             </div>
             
             <!--Aqui ficam as funções de próximo, anterior, primeiro e último-->
-            <div class="row d-flex align-items-center justify-content-center w-100 flex-row mt-5" style="text-align: center; font-size: 3rem;">
+            <div class="row d-flex align-items-center justify-content-center w-100 flex-row mt-5 fs-1" style="text-align: center; max-height: 20%;">
                 <div>
                 <i class="fa-solid fa-backward-fast"></i>
                 <i class="fa-solid fa-backward-step"></i>
