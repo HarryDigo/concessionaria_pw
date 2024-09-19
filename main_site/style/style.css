@@ -89,8 +89,12 @@
 
 /* Classes Principais - Página de Login*/
 
-
-
+@media (max-width 700px){
+  .border-zero{
+    border-right: 0 !important;
+  }
+}
+  
 .row-login{
   background: #7AEBEF;
   height: 100%;
