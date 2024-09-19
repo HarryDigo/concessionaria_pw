@@ -34,32 +34,7 @@
     scale: 0.7;
 }
 
-/* Classes Principais - Página de Login*/
-.row-login{
-  background: #7AEBEF;
-  height: 100%;
-}
-
-.input{
-  height: 45px;
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  outline: none;
-  margin-bottom: 20px;
-  color: #40414a;
-}
-
-.input label{
-margin-top: -20px;
-}
-
-.vh-100{
-  min-height: 100vh;
-  display: flex;
-}
-
+/* Classes com relação aos botões */
 .btn-primary {
   background-color: #7AF0A4 !important;
   border-color: #56AD75 !important;
@@ -84,6 +59,58 @@ margin-top: -20px;
 .btn-salvar:hover{
   background-color:  #56AD75 !important;
   border-color: #4e9c69 !important
+}
+
+.btn-editar {
+  background-color: #7AEBEF !important;
+  border-color: #6dd3d6 !important;
+  color: black !important;
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+}
+
+.btn-editar:hover{
+  background-color:  #6dd3d6  !important;
+  border-color: #64c0c4  !important
+}
+
+.btn-excluir {
+  background-color: #7AA1F0 !important;
+  border-color: #6e91d8 !important;
+  color: black !important;
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+}
+
+.btn-excluir:hover{
+  background-color:  #6e91d8 !important;
+  border-color: #607fbd !important
+}
+
+/* Classes Principais - Página de Login*/
+.row-login{
+  background: #7AEBEF;
+  height: 100%;
+}
+
+.input{
+  height: 45px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  margin-bottom: 20px;
+  color: #40414a;
+}
+
+.input label{
+margin-top: -20px;
+}
+
+.vh-100{
+  min-height: 100vh;
+  display: flex;
 }
 
 .coluna-login{
@@ -122,6 +149,11 @@ margin-top: -20px;
 
 .hover-verde:hover{
   background-color: #7AF0A4;
+  transition: ease-in-out 0.4s;
+}
+
+.hover-azul:hover{
+  color: #7AEBEF;
   transition: ease-in-out 0.4s;
 }
 
