@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2024 at 01:46 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Tempo de geração: 20-Set-2024 às 17:04
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bdlocadora_ds`
+-- Banco de dados: `bdlocadora_ds`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria`
+-- Estrutura da tabela `categoria`
 --
 
 CREATE TABLE `categoria` (
@@ -34,19 +34,19 @@ CREATE TABLE `categoria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `categoria`
+-- Extraindo dados da tabela `categoria`
 --
 
 INSERT INTO `categoria` (`catCod`, `catNome`, `catValorKm`) VALUES
-(1, 'Basico', 0.49),
-(2, 'Utilitario', 0.51),
-(3, 'Luxo', 0.53),
-(4, 'Especial', 0.55);
+(1, 'Basico', '0.49'),
+(2, 'Utilitario', '0.51'),
+(3, 'Luxo', '0.53'),
+(4, 'Especial', '0.55');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `clientes`
+-- Estrutura da tabela `clientes`
 --
 
 CREATE TABLE `clientes` (
@@ -61,7 +61,7 @@ CREATE TABLE `clientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `clientes`
+-- Extraindo dados da tabela `clientes`
 --
 
 INSERT INTO `clientes` (`clienteCPF`, `clienteNome`, `clienteEnde`, `clienteTel`, `clienteCidade`, `clienteDataNasc`, `clienteCNH`, `clienteCNHCat`) VALUES
@@ -79,7 +79,7 @@ INSERT INTO `clientes` (`clienteCPF`, `clienteNome`, `clienteEnde`, `clienteTel`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `combustivel`
+-- Estrutura da tabela `combustivel`
 --
 
 CREATE TABLE `combustivel` (
@@ -88,7 +88,7 @@ CREATE TABLE `combustivel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `combustivel`
+-- Extraindo dados da tabela `combustivel`
 --
 
 INSERT INTO `combustivel` (`combTipo`, `combNome`) VALUES
@@ -100,7 +100,7 @@ INSERT INTO `combustivel` (`combTipo`, `combNome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `departamento`
+-- Estrutura da tabela `departamento`
 --
 
 CREATE TABLE `departamento` (
@@ -109,7 +109,7 @@ CREATE TABLE `departamento` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `departamento`
+-- Extraindo dados da tabela `departamento`
 --
 
 INSERT INTO `departamento` (`deptoCod`, `deptoNome`) VALUES
@@ -122,7 +122,7 @@ INSERT INTO `departamento` (`deptoCod`, `deptoNome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `funcionarios`
+-- Estrutura da tabela `funcionarios`
 --
 
 CREATE TABLE `funcionarios` (
@@ -137,32 +137,41 @@ CREATE TABLE `funcionarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `funcionarios`
+-- Extraindo dados da tabela `funcionarios`
 --
 
 INSERT INTO `funcionarios` (`funcMatricula`, `funcNome`, `funcDepto`, `funcSalario`, `funcAdmissao`, `funcFilho`, `funcSexo`, `funcAtivo`) VALUES
-(1001, 'Francisco de Oliveira', 1, 1800.00, '2001-11-20', 0, 'M', 1),
-(1002, 'Ana Maria Andrade', 2, 3200.00, '1999-02-13', 1, 'F', 1),
-(1003, 'Antonio Andrade de Oliveira', 3, 4800.00, '2007-11-05', 3, 'M', 1),
-(1004, 'Maria Abelarda da Silva', 5, 937.00, '1997-03-01', 5, 'F', 1),
-(1005, 'Manoel Trindade', 4, 7850.50, '1997-01-02', 3, 'M', 1),
-(1006, 'Alexandre Barbosa', 1, 1800.00, '2000-06-08', 2, 'M', 1),
-(1007, 'Rosana Campoy', 2, 3020.00, '2004-07-24', 3, 'F', 1),
-(1008, 'Janaina Albuquerque', 3, 4500.00, '1999-03-25', 0, 'F', 1),
-(1009, 'Roberto Silva Junior', 1, 1810.00, '2003-07-07', 0, 'M', 1),
-(1010, 'Carlos Eduardo Siqueira', 4, 7890.00, '2009-08-04', 1, 'M', 1),
-(1011, 'Heitor Sampaio', 1, 3450.00, '2011-03-05', 1, 'M', 1),
-(1012, 'Celia Menezes', 1, 1980.00, '2008-07-18', 0, 'F', 1),
-(1013, 'Jose Alves Costa', 1, 1650.00, '2000-09-11', 1, 'M', 1),
-(1014, 'Arlinda Medeiros', 5, 937.00, '2000-05-03', 5, 'F', 1),
-(1015, 'Josefina Sarmento', 4, 6789.00, '1997-01-02', 1, 'F', 1),
-(1016, 'Wendell Navarro Perez', 3, 1212.00, '2004-04-15', 2, 'M', 1),
-(1017, 'Rodolfo Rodrigues', 1, 8500.00, '2022-09-10', 2, 'M', 1);
+(1001, 'Francisco de Oliveira', 1, '1800.00', '2001-11-20', 0, 'M', 1),
+(1002, 'Ana Maria Andrade', 2, '3200.00', '1999-02-13', 1, 'F', 1),
+(1003, 'Antonio Andrade de Oliveira', 3, '4800.00', '2007-11-05', 3, 'M', 1),
+(1004, 'Maria Abelarda da Silva', 5, '937.00', '1997-03-01', 5, 'F', 1),
+(1005, 'Manoel Trindade', 4, '7850.50', '1997-01-02', 3, 'M', 1),
+(1006, 'Alexandre Barbosa', 1, '1800.00', '2000-06-08', 2, 'M', 1),
+(1007, 'Rosana Campoy', 2, '3020.00', '2004-07-24', 3, 'F', 1),
+(1008, 'Janaina Albuquerque', 3, '4500.00', '1999-03-25', 0, 'F', 1),
+(1009, 'Roberto Silva Junior', 1, '1810.00', '2003-07-07', 0, 'M', 1),
+(1010, 'Carlos Eduardo Siqueira', 4, '7890.00', '2009-08-04', 1, 'M', 1),
+(1011, 'Heitor Sampaio', 1, '3450.00', '2011-03-05', 1, 'M', 1),
+(1012, 'Celia Menezes', 1, '1980.00', '2008-07-18', 0, 'F', 1),
+(1013, 'Jose Alves Costa', 1, '1650.00', '2000-09-11', 1, 'M', 1),
+(1014, 'Arlinda Medeiros', 5, '937.00', '2000-05-03', 5, 'F', 1),
+(1015, 'Josefina Sarmento', 4, '6789.00', '1997-01-02', 1, 'F', 1),
+(1016, 'Wendell Navarro Perez', 3, '1212.00', '2004-04-15', 2, 'M', 1),
+(1017, 'Rodolfo Rodrigues', 1, '8500.00', '2022-09-10', 2, 'M', 1);
+
+--
+-- Acionadores `funcionarios`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_func_user` AFTER INSERT ON `funcionarios` FOR EACH ROW INSERT INTO usuarios(usuarioLogin, usuarioSenha) VALUES
+            (NEW.funcMatricula, REPLACE(NEW.funcAdmissao, '-', ''))
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ordem_servico`
+-- Estrutura da tabela `ordem_servico`
 --
 
 CREATE TABLE `ordem_servico` (
@@ -179,25 +188,49 @@ CREATE TABLE `ordem_servico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `ordem_servico`
+-- Extraindo dados da tabela `ordem_servico`
 --
 
 INSERT INTO `ordem_servico` (`osNum`, `osFuncMat`, `osClienteCPF`, `osVeicPlaca`, `osDataRetirada`, `osDataDevolucao`, `osKmRetirada`, `osKmDevolucao`, `osStatus`, `osValorPgto`) VALUES
-(20240020492, 1008, 444555666, 'AQY2005', '2023-01-20', '2023-02-15', 6700.00, 7000.00, 1, 390.00),
-(20240706043, 1011, 777888999, 'AQY2005', '2021-07-15', '2021-07-30', 1220.00, 1535.00, 1, 980.00),
-(20241110222, 1002, 333444555, 'ADX1473', '2024-06-30', '2024-07-25', 1400.00, 1500.00, 1, 590.00),
-(20242276851, 1016, 555666777, 'AWY4546', '2023-02-02', '2023-02-10', 840.00, 1010.00, 1, 1990.00),
-(20245736278, 1003, 123456789, 'AWS2365', '2023-10-30', '2023-11-20', 115.00, 550.00, 1, 1330.00),
-(20246456237, 1010, 666777888, 'AWY4546', '2019-10-30', '2019-11-25', 90.00, 900.00, 1, 1490.90),
-(20248674623, 1012, 888999000, 'AQW1234', '2020-11-30', '2020-12-10', 1550.00, 1910.00, 1, 2090.90),
-(20249002042, 1006, 222333444, 'AZX3273', '2022-01-03', '2022-01-09', 540.00, 690.00, 1, 590.90),
-(20249998839, 1007, 111222333, 'AWV1234', '2022-02-20', '2022-03-01', 155.00, 600.00, 1, 790.00),
-(20298876243, 1001, 987654321, 'AQX3451', '2024-09-30', '2024-10-01', 300.00, 900.00, 1, 990.90);
+(2024227685, 1016, 555666777, 'AWY4546', '2023-02-02', '2023-02-10', '840.00', '1010.00', 1, '1990.00'),
+(2024573627, 1003, 123456789, 'AWS2365', '2023-10-30', '2023-11-20', '115.00', '550.00', 1, '1330.00'),
+(2024645623, 1010, 666777888, 'AWY4546', '2019-10-30', '2019-11-25', '90.00', '900.00', 1, '1490.90'),
+(2024867462, 1012, 888999000, 'AQW1234', '2020-11-30', '2020-12-10', '1550.00', '1910.00', 1, '2090.90'),
+(2024900204, 1006, 222333444, 'AZX3273', '2022-01-03', '2022-01-09', '540.00', '690.00', 1, '590.90'),
+(2024999883, 1007, 111222333, 'AWV1234', '2022-02-20', '2022-03-01', '155.00', '600.00', 1, '790.00'),
+(2029887624, 1001, 987654321, 'AQX3451', '2024-09-30', '2024-10-01', '300.00', '900.00', 1, '990.90'),
+(20240020492, 1008, 444555666, 'AQY2005', '2023-01-20', NULL, '6700.00', '0.00', 0, NULL),
+(20240706043, 1011, 777888999, 'AQY2005', '2021-07-15', NULL, '1220.00', '0.00', 0, NULL),
+(20241110222, 1002, 333444555, 'ADX1473', '2024-06-30', NULL, '1400.00', '0.00', 0, NULL);
+
+--
+-- Acionadores `ordem_servico`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_calc_pagamento` BEFORE UPDATE ON `ordem_servico` FOR EACH ROW BEGIN
+            SET @id_cat = (SELECT veicCat FROM veiculos WHERE veicPlaca = NEW.osVeicPlaca);
+            SET @valor_km = (SELECT catValorKm FROM categoria WHERE catCod = @id_cat);
+            SET NEW.osValorPgto = @valor_km * NEW.osKmDevolucao;
+        END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `tr_veic_status` AFTER INSERT ON `ordem_servico` FOR EACH ROW UPDATE veiculos 
+            SET veicStatusAlocado = 1 
+            WHERE veicPlaca = NEW.osVeicPlaca
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `tr_veic_status_off` AFTER UPDATE ON `ordem_servico` FOR EACH ROW UPDATE veiculos 
+            SET veicStatusAlocado = 0 
+            WHERE veicPlaca = NEW.osVeicPlaca
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estrutura da tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -208,10 +241,33 @@ CREATE TABLE `usuarios` (
   `usuarioStatus` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`usuarioLogin`, `usuarioSenha`, `usuarioFuncMat`, `usuarioSetor`, `usuarioStatus`) VALUES
+(1001, '20011120', NULL, 0, NULL),
+(1002, '19990213', NULL, 0, NULL),
+(1003, '20071105', NULL, 0, NULL),
+(1004, '19970301', NULL, 0, NULL),
+(1005, '19970102', NULL, 0, NULL),
+(1006, '20000608', NULL, 0, NULL),
+(1007, '20040724', NULL, 0, NULL),
+(1008, '19990325', NULL, 0, NULL),
+(1009, '20030707', NULL, 0, NULL),
+(1010, '20090804', NULL, 0, NULL),
+(1011, '20110305', NULL, 0, NULL),
+(1012, '20080718', NULL, 0, NULL),
+(1013, '20000911', NULL, 0, NULL),
+(1014, '20000503', NULL, 0, NULL),
+(1015, '19970102', NULL, 0, NULL),
+(1016, '20040415', NULL, 0, NULL),
+(1017, '20220910', NULL, 0, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `veiculos`
+-- Estrutura da tabela `veiculos`
 --
 
 CREATE TABLE `veiculos` (
@@ -226,64 +282,64 @@ CREATE TABLE `veiculos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `veiculos`
+-- Extraindo dados da tabela `veiculos`
 --
 
 INSERT INTO `veiculos` (`veicPlaca`, `veicMarca`, `veicModelo`, `veicCor`, `veicAno`, `veicComb`, `veicCat`, `veicStatusAlocado`) VALUES
-('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 1),
-('ACZ3243', 'VW', 'Fusca', 'Rosa', 1956, 'G', 4, 1),
-('ADE3456', 'Chevrolet', 'Camaro', 'Amarelo', 2022, 'G', 4, 1),
-('ADW2456', 'VW', 'Gol', 'Vermelho', 2021, 'A', 1, 1),
+('ABW4007', 'VW', 'Jetta', 'Preto', 2022, 'F', 3, 0),
+('ACZ3243', 'VW', 'Fusca', 'Rosa', 1956, 'G', 4, 0),
+('ADE3456', 'Chevrolet', 'Camaro', 'Amarelo', 2022, 'G', 4, 0),
+('ADW2456', 'VW', 'Gol', 'Vermelho', 2021, 'A', 1, 0),
 ('ADX1473', 'Ford', 'Ka', 'Branco', 2021, 'A', 1, 1),
 ('AQW1234', 'Ford', 'Fusion', 'Preto', 2022, 'F', 3, 1),
 ('AQX3451', 'Porsche', 'Carrera', 'Preto', 2022, 'G', 4, 1),
 ('AQY2005', 'Chevrolet', 'S10', 'Branco', 2022, 'D', 2, 1),
-('ASX3232', 'Ford', 'Ka', 'Marrom', 2022, 'F', 1, 1),
-('AVX4003', 'VW', 'Amarok', 'Preto', 2022, 'D', 2, 1),
-('AWQ3703', 'Chevrolet', 'Omega', 'Preto', 2022, 'G', 3, 1),
+('ASX3232', 'Ford', 'Ka', 'Marrom', 2022, 'F', 1, 0),
+('AVX4003', 'VW', 'Amarok', 'Preto', 2022, 'D', 2, 0),
+('AWQ3703', 'Chevrolet', 'Omega', 'Preto', 2022, 'G', 3, 0),
 ('AWS2365', 'Chevrolet', 'Cruze', 'Azul', 2022, 'F', 3, 1),
-('AWV1234', 'Fiat', 'Palio', 'Branco', 2021, 'F', 1, 0),
+('AWV1234', 'Fiat', 'Palio', 'Branco', 2021, 'F', 1, 1),
 ('AWV1323', 'VW', 'Gol', 'Branco', 2022, 'F', 1, 0),
 ('AWY4546', 'Fiat', 'Fiorino', 'Branco', 2021, 'A', 2, 1),
 ('AZX3273', 'VW', 'Fox', 'Azul', 2021, 'F', 1, 1);
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `categoria`
+-- Índices para tabela `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`catCod`);
 
 --
--- Indexes for table `clientes`
+-- Índices para tabela `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`clienteCPF`);
 
 --
--- Indexes for table `combustivel`
+-- Índices para tabela `combustivel`
 --
 ALTER TABLE `combustivel`
   ADD PRIMARY KEY (`combTipo`);
 
 --
--- Indexes for table `departamento`
+-- Índices para tabela `departamento`
 --
 ALTER TABLE `departamento`
   ADD PRIMARY KEY (`deptoCod`);
 
 --
--- Indexes for table `funcionarios`
+-- Índices para tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
   ADD PRIMARY KEY (`funcMatricula`),
   ADD KEY `funcDepto` (`funcDepto`);
 
 --
--- Indexes for table `ordem_servico`
+-- Índices para tabela `ordem_servico`
 --
 ALTER TABLE `ordem_servico`
   ADD PRIMARY KEY (`osNum`),
@@ -292,14 +348,14 @@ ALTER TABLE `ordem_servico`
   ADD KEY `osFuncMat` (`osFuncMat`);
 
 --
--- Indexes for table `usuarios`
+-- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`usuarioLogin`),
   ADD KEY `usuarioFuncMat` (`usuarioFuncMat`);
 
 --
--- Indexes for table `veiculos`
+-- Índices para tabela `veiculos`
 --
 ALTER TABLE `veiculos`
   ADD PRIMARY KEY (`veicPlaca`),
@@ -307,45 +363,39 @@ ALTER TABLE `veiculos`
   ADD KEY `veicCat` (`veicCat`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `categoria`
+-- AUTO_INCREMENT de tabela `categoria`
 --
 ALTER TABLE `categoria`
   MODIFY `catCod` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `departamento`
+-- AUTO_INCREMENT de tabela `departamento`
 --
 ALTER TABLE `departamento`
   MODIFY `deptoCod` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `funcionarios`
+-- AUTO_INCREMENT de tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
   MODIFY `funcMatricula` smallint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1018;
 
 --
--- AUTO_INCREMENT for table `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `usuarioLogin` int(9) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
+-- Restrições para despejos de tabelas
 --
 
 --
--- Constraints for table `funcionarios`
+-- Limitadores para a tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
   ADD CONSTRAINT `funcionarios_ibfk_1` FOREIGN KEY (`funcDepto`) REFERENCES `departamento` (`deptoCod`);
 
 --
--- Constraints for table `ordem_servico`
+-- Limitadores para a tabela `ordem_servico`
 --
 ALTER TABLE `ordem_servico`
   ADD CONSTRAINT `ordem_servico_ibfk_1` FOREIGN KEY (`osVeicPlaca`) REFERENCES `veiculos` (`veicPlaca`),
@@ -353,13 +403,13 @@ ALTER TABLE `ordem_servico`
   ADD CONSTRAINT `ordem_servico_ibfk_3` FOREIGN KEY (`osFuncMat`) REFERENCES `funcionarios` (`funcMatricula`);
 
 --
--- Constraints for table `usuarios`
+-- Limitadores para a tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`usuarioFuncMat`) REFERENCES `funcionarios` (`funcMatricula`);
 
 --
--- Constraints for table `veiculos`
+-- Limitadores para a tabela `veiculos`
 --
 ALTER TABLE `veiculos`
   ADD CONSTRAINT `veiculos_ibfk_1` FOREIGN KEY (`veicComb`) REFERENCES `combustivel` (`combTipo`),

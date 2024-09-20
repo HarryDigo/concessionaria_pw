@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2024 at 01:47 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Tempo de geração: 20-Set-2024 às 17:02
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bdlocadora_ds`
+-- Banco de dados: `bdlocadora_ds`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria`
+-- Estrutura da tabela `categoria`
 --
 
 CREATE TABLE `categoria` (
@@ -36,7 +36,7 @@ CREATE TABLE `categoria` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `clientes`
+-- Estrutura da tabela `clientes`
 --
 
 CREATE TABLE `clientes` (
@@ -53,7 +53,7 @@ CREATE TABLE `clientes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `combustivel`
+-- Estrutura da tabela `combustivel`
 --
 
 CREATE TABLE `combustivel` (
@@ -64,7 +64,7 @@ CREATE TABLE `combustivel` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `departamento`
+-- Estrutura da tabela `departamento`
 --
 
 CREATE TABLE `departamento` (
@@ -75,7 +75,7 @@ CREATE TABLE `departamento` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `funcionarios`
+-- Estrutura da tabela `funcionarios`
 --
 
 CREATE TABLE `funcionarios` (
@@ -89,10 +89,19 @@ CREATE TABLE `funcionarios` (
   `funcAtivo` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Acionadores `funcionarios`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_func_user` AFTER INSERT ON `funcionarios` FOR EACH ROW INSERT INTO usuarios(usuarioLogin, usuarioSenha) VALUES
+            (NEW.funcMatricula, REPLACE(NEW.funcAdmissao, '-', ''))
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ordem_servico`
+-- Estrutura da tabela `ordem_servico`
 --
 
 CREATE TABLE `ordem_servico` (
@@ -108,10 +117,34 @@ CREATE TABLE `ordem_servico` (
   `osValorPgto` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Acionadores `ordem_servico`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_calc_pagamento` BEFORE UPDATE ON `ordem_servico` FOR EACH ROW BEGIN
+            SET @id_cat = (SELECT veicCat FROM veiculos WHERE veicPlaca = NEW.osVeicPlaca);
+            SET @valor_km = (SELECT catValorKm FROM categoria WHERE catCod = @id_cat);
+            SET NEW.osValorPgto = @valor_km * NEW.osKmDevolucao;
+        END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `tr_veic_status` AFTER INSERT ON `ordem_servico` FOR EACH ROW UPDATE veiculos 
+            SET veicStatusAlocado = 1 
+            WHERE veicPlaca = NEW.osVeicPlaca
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `tr_veic_status_off` AFTER UPDATE ON `ordem_servico` FOR EACH ROW UPDATE veiculos 
+            SET veicStatusAlocado = 0 
+            WHERE veicPlaca = NEW.osVeicPlaca
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estrutura da tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -125,7 +158,7 @@ CREATE TABLE `usuarios` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `veiculos`
+-- Estrutura da tabela `veiculos`
 --
 
 CREATE TABLE `veiculos` (
@@ -140,42 +173,42 @@ CREATE TABLE `veiculos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `categoria`
+-- Índices para tabela `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`catCod`);
 
 --
--- Indexes for table `clientes`
+-- Índices para tabela `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`clienteCPF`);
 
 --
--- Indexes for table `combustivel`
+-- Índices para tabela `combustivel`
 --
 ALTER TABLE `combustivel`
   ADD PRIMARY KEY (`combTipo`);
 
 --
--- Indexes for table `departamento`
+-- Índices para tabela `departamento`
 --
 ALTER TABLE `departamento`
   ADD PRIMARY KEY (`deptoCod`);
 
 --
--- Indexes for table `funcionarios`
+-- Índices para tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
   ADD PRIMARY KEY (`funcMatricula`),
   ADD KEY `funcDepto` (`funcDepto`);
 
 --
--- Indexes for table `ordem_servico`
+-- Índices para tabela `ordem_servico`
 --
 ALTER TABLE `ordem_servico`
   ADD PRIMARY KEY (`osNum`),
@@ -184,14 +217,14 @@ ALTER TABLE `ordem_servico`
   ADD KEY `osFuncMat` (`osFuncMat`);
 
 --
--- Indexes for table `usuarios`
+-- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`usuarioLogin`),
   ADD KEY `usuarioFuncMat` (`usuarioFuncMat`);
 
 --
--- Indexes for table `veiculos`
+-- Índices para tabela `veiculos`
 --
 ALTER TABLE `veiculos`
   ADD PRIMARY KEY (`veicPlaca`),
@@ -199,45 +232,39 @@ ALTER TABLE `veiculos`
   ADD KEY `veicCat` (`veicCat`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `categoria`
+-- AUTO_INCREMENT de tabela `categoria`
 --
 ALTER TABLE `categoria`
   MODIFY `catCod` int(9) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `departamento`
+-- AUTO_INCREMENT de tabela `departamento`
 --
 ALTER TABLE `departamento`
   MODIFY `deptoCod` int(9) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `funcionarios`
+-- AUTO_INCREMENT de tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
   MODIFY `funcMatricula` smallint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
 
 --
--- AUTO_INCREMENT for table `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `usuarioLogin` int(9) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
+-- Restrições para despejos de tabelas
 --
 
 --
--- Constraints for table `funcionarios`
+-- Limitadores para a tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
   ADD CONSTRAINT `funcionarios_ibfk_1` FOREIGN KEY (`funcDepto`) REFERENCES `departamento` (`deptoCod`);
 
 --
--- Constraints for table `ordem_servico`
+-- Limitadores para a tabela `ordem_servico`
 --
 ALTER TABLE `ordem_servico`
   ADD CONSTRAINT `ordem_servico_ibfk_1` FOREIGN KEY (`osVeicPlaca`) REFERENCES `veiculos` (`veicPlaca`),
@@ -245,13 +272,13 @@ ALTER TABLE `ordem_servico`
   ADD CONSTRAINT `ordem_servico_ibfk_3` FOREIGN KEY (`osFuncMat`) REFERENCES `funcionarios` (`funcMatricula`);
 
 --
--- Constraints for table `usuarios`
+-- Limitadores para a tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`usuarioFuncMat`) REFERENCES `funcionarios` (`funcMatricula`);
 
 --
--- Constraints for table `veiculos`
+-- Limitadores para a tabela `veiculos`
 --
 ALTER TABLE `veiculos`
   ADD CONSTRAINT `veiculos_ibfk_1` FOREIGN KEY (`veicComb`) REFERENCES `combustivel` (`combTipo`),
