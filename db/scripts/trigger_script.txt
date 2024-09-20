@@ -1,0 +1,37 @@
+DELIMITER ;
+
+USE bdlocadora_ds
+
+#triggers
+
+CREATE TRIGGER tr_func_user
+    AFTER INSERT ON funcionarios
+    FOR EACH ROW
+        INSERT INTO usuarios(usuarioLogin, usuarioSenha) VALUES
+            (NEW.funcMatricula, REPLACE(NEW.funcAdmissao, '-', ''));
+
+CREATE TRIGGER tr_veic_status
+    AFTER INSERT ON ordem_servico 
+    FOR EACH ROW 
+        UPDATE veiculos 
+            SET veicStatusAlocado = 1 
+            WHERE veicPlaca = NEW.osVeicPlaca;
+
+CREATE TRIGGER tr_veic_status_off
+    AFTER UPDATE ON ordem_servico 
+    FOR EACH ROW 
+        UPDATE veiculos 
+            SET veicStatusAlocado = 0 
+            WHERE veicPlaca = NEW.osVeicPlaca;
+
+DELIMITER //
+CREATE TRIGGER tr_calc_pagamento
+    BEFORE UPDATE ON ordem_servico
+    FOR EACH ROW
+        BEGIN
+            SET @id_cat = (SELECT veicCat FROM veiculos WHERE veicPlaca = NEW.osVeicPlaca);
+            SET @valor_km = (SELECT catValorKm FROM categoria WHERE catCod = @id_cat);
+            SET NEW.osValorPgto = @valor_km * NEW.osKmDevolucao;
+        END; //
+
+DELIMITER ;
