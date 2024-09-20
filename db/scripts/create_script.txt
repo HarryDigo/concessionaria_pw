@@ -194,8 +194,8 @@ INSERT INTO ordem_servico(osNum, osFuncMat, osClienteCPF, osVeicPlaca, osDataRet
 CREATE TRIGGER tr_func_user
     AFTER INSERT ON funcionarios
     FOR EACH ROW
-        INSERT INTO usuarios(usuarioLogin, usuarioSenha) VALUES
-            (NEW.funcMatricula, REPLACE(NEW.funcAdmissao, '-', ''));
+        INSERT INTO usuarios(usuarioLogin, usuarioSenha, usuarioFuncMat, usuarioStatus) VALUES
+            (NEW.funcMatricula, REPLACE(NEW.funcAdmissao, '-', ''), NEW.funcMatricula, 1);
 
 CREATE TRIGGER tr_veiculo_status 
     AFTER INSERT ON ordem_servico 
