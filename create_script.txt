@@ -1,0 +1,109 @@
+DELIMITER ;
+
+CREATE DATABASE bdlocadora_ds;
+
+USE bdlocadora_ds
+
+#tables
+
+CREATE TABLE clientes(
+    clienteCPF int(9) NOT NULL,
+    clienteNome varchar(40) NOT NULL,
+    clienteEnde varchar(60) NOT NULL,
+    clienteTel varchar(15) NOT NULL,
+    clienteCidade varchar(60) NOT NULL,
+    clienteDataNasc date NOT NULL,
+    clienteCNH bigint(11) NOT NULL,
+    clienteCNHCat varchar(2) NOT NULL,
+    PRIMARY KEY(clienteCPF)
+);
+
+CREATE TABLE funcionarios(
+    funcMatricula smallint(4) NOT NULL AUTO_INCREMENT,
+    funcNome varchar(40) NOT NULL,
+    funcDepto int(9) NOT NULL,
+    funcSalario decimal(8,2) NOT NULL,
+    funcAdmissao date NOT NULL,
+    funcFilho tinyint(1) NOT NULL,
+    funcSexo varchar(1) NOT NULL,
+    funcAtivo tinyint(1) NOT NULL,
+    PRIMARY KEY(funcMatricula)
+);
+
+CREATE TABLE veiculos(
+    veicPlaca char(7) NOT NULL,
+    veicMarca varchar(15) NOT NULL,
+    veicModelo varchar(15) NOT NULL,
+    veicCor varchar(15) NULL,
+    veicAno smallint(4) NOT NULL,
+    veicComb char(1) NULL,
+    veicCat int(9) NULL,
+    veicStatusAlocado tinyint(1) NOT NULL,
+    PRIMARY KEY(veicPlaca)
+);
+
+CREATE TABLE departamento(
+    deptoCod int(9) NOT NULL AUTO_INCREMENT,
+    deptoNome varchar(20) NOT NULL,
+    PRIMARY KEY(deptoCod)
+);
+
+CREATE TABLE categoria(
+    catCod int(9) NOT NULL AUTO_INCREMENT,
+    catNome varchar(20) NOT NULL,
+    catValorKm decimal(8, 2) NOT NULL,
+    PRIMARY KEY(catCod)
+);
+
+CREATE TABLE combustivel(
+    combTipo char(1) NOT NULL,
+    combNome varchar(20) NULL,
+    PRIMARY KEY(combTipo)
+);
+
+CREATE TABLE ordem_servico(
+    osNum bigint(11) NOT NULL,
+    osFuncMat smallint(4) NOT NULL,
+    osClienteCPF int(9) NOT NULL,
+    osVeicPlaca char(7) NOT NULL,
+    osDataRetirada date NOT NULL,
+    osDataDevolucao date NULL,
+    osKmRetirada decimal(8, 2) NOT NULL,
+    osKmDevolucao decimal(8, 2) NOT NULL,
+    osStatus tinyint(1) NOT NULL,
+    osValorPgto decimal(10, 2) NULL,
+    PRIMARY KEY(osNum)
+);
+
+CREATE TABLE usuarios(
+    usuarioLogin int(9) NOT NULL,
+    usuarioSenha varchar(8) NOT NULL,
+    usuarioFuncMat smallint(4) NULL,
+    usuarioSetor int(9) NOT NULL,
+    usuarioStatus tinyint(1) NULL,
+    PRIMARY KEY(usuarioLogin)
+);
+
+#foreign keys
+
+ALTER TABLE funcionarios
+    AUTO_INCREMENT = 1001,
+    ADD FOREIGN KEY (funcDepto) REFERENCES departamento(deptoCod);
+
+ALTER TABLE veiculos
+    ADD FOREIGN KEY (veicComb) REFERENCES combustivel(combTipo);
+
+ALTER TABLE veiculos
+    ADD FOREIGN KEY (veicCat) REFERENCES categoria(catCod);
+
+ALTER TABLE ordem_servico
+    ADD FOREIGN KEY (osVeicPlaca) REFERENCES veiculos(veicPlaca);
+
+ALTER TABLE ordem_servico
+    ADD FOREIGN KEY (osClienteCPF) REFERENCES clientes(clienteCPF);
+
+ALTER TABLE ordem_servico
+    ADD FOREIGN KEY (osFuncMat) REFERENCES funcionarios(funcMatricula);
+
+ALTER TABLE usuarios
+    ADD FOREIGN KEY (usuarioFuncMat) REFERENCES funcionarios(funcMatricula);
